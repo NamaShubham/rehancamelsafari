@@ -27,6 +27,7 @@ function App() {
   const showHome = () => {
     setCurrentView('home');
     setSelectedPackage(null);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const showAbout = () => {
@@ -114,7 +115,7 @@ function App() {
     <div className="App">
       <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
       <ImageSlider />
-      <Features />
+      {/* <Features /> */}
       <Packages onPackageClick={showPackageDetail} />
       <Experiences />
       <Footer />

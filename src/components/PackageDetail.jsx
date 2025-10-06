@@ -17,30 +17,31 @@ const PackageDetail = ({ onBack }) => {
   const [guests, setGuests] = useState(1);
 
   const packageData = {
-    title: "A Luxury Getaway Under the Stars",
-    duration: "01 Nights / 02 Days",
+    title: "Camel Cart Safari",
+    duration: "1-2 Hours",
     location: "Pushkar",
-    originalPrice: "INR 31,250",
-    price: "INR 25,000",
-    discountedPrice: "INR 22,500",
-    discount: "20% Off",
+    originalPrice: "INR 5,000",
+    price: "INR 5,000",
+    discountedPrice: "INR 2,500",
+    discount: "50% Off",
     images: [
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      "/images/image2.jpg",
+      "/images/ocone.jpg",
+      "/images/000fecd9-8cc5-4bcf-814a-1ee0a6c63374.jpg",
+      "/images/camel-1.jpg"
     ],
     highlights: [
-      "Private luxury stay in a desert oasis",
-      "Exclusive Jeep and Camel Safaris",
-      "Luxurious open-air bed under the stars",
-      "Intimate bonfire and gourmet dinner experience",
-      "Spectacular sunset and sunrise views",
-      "Romantic stargazing session",
-      "Live Rajasthani Cultural Show with traditional music by the Manganiyar community",
-      "Personalized service ensures a unique desert experience"
+      "Authentic Rajasthani Experience",
+      "Comfortable Ride",
+      "Sunset / Sunrise Views",
+      "Village Visit",
+      "Cultural Interaction",
+      "Photo Opportunities",
+      "Professional Guide",
+      "Flexible Duration Options",
+      "Family & Group Friendly"
     ],
-    overview: "This luxury desert escape is designed for those who want to travel into the quiet heart of the desert, where exclusivity and luxury meet. Far from the usual tourist paths, you will find yourself in a private, secluded oasis among the majestic dunes, surrounded by the peaceful vastness of the Thar Desert.\n\nYour stay includes a luxurious bed set amid golden sand, offering a unique experience of sleeping under the stars. This open-air suite, with its fine linens and soft lantern glow, blends the comfort of a five-star room with the magic of nature.\n\nWith no crowds, just you, the endless desert and the starry sky. A personal bonfire and a custom gourmet meal make your evening even better, whether you are enjoying a romantic stargazing session or the quiet beauty of the desert.",
+    overview: "Experience the magic of the Pushkar desert with our Camel Cart Safari — a perfect blend of comfort, culture, and adventure. Sit back and relax as our friendly camels take you across golden dunes, passing through charming Rajasthani villages and offering breathtaking views of the Aravalli hills. Ideal for families and couples, this traditional ride lets you enjoy the desert breeze, click stunning photos, and experience authentic rural life. Whether you choose a morning or sunset safari, you’ll be treated to warm hospitality, local tea, and unforgettable desert memories.",
     inclusions: [
       "Transport facility",
       "Camel Ride to the Sand Dunes",
@@ -119,16 +120,10 @@ const PackageDetail = ({ onBack }) => {
 
   const relatedPackages = [
     {
-      title: "Dinner On The Dunes",
-      duration: "1 Day",
-      price: "INR 4999",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
       title: "Arabian Night with Cultural Show",
       duration: "01 Nights 02 Days",
-      price: "INR 3250",
-      image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      price: "INR 12000",
+      image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg"
     },
     {
       title: "Half Day Tour",
@@ -137,23 +132,23 @@ const PackageDetail = ({ onBack }) => {
       image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
-      title: "Heritage Pushkar Package",
+      title: "Dinner On The Dunes",
       duration: "02 Nights / 03 Days",
       price: "INR 9999",
       image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
-    {
-      title: "Luxury Overnight Safari",
-      duration: "01 Nights / 02 Days",
-      price: "INR 3999",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      title: "One and a Half Hours Jeep Safari Tour",
-      duration: "1.5 Hours",
-      price: "INR 3000",
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    }
+    // {
+    //   title: "Luxury Overnight Safari",
+    //   duration: "01 Nights / 02 Days",
+    //   price: "INR 3999",
+    //   image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    // },
+    // {
+    //   title: "One and a Half Hours Jeep Safari Tour",
+    //   duration: "1.5 Hours",
+    //   price: "INR 3000",
+    //   image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    // }
   ];
 
   const nextImage = () => {
@@ -167,16 +162,6 @@ const PackageDetail = ({ onBack }) => {
   return (
     <div className="package-detail">
       <div className="container">
-        {/* Header */}
-        <div className="detail-header">
-          <button onClick={onBack} className="back-button">
-            <ArrowLeft size={20} />
-            Back to Packages
-          </button>
-          <div className="breadcrumb">
-            <span>Tour Packages</span> / <span>{packageData.title}</span>
-          </div>
-        </div>
 
         {/* Image Gallery */}
         <div className="image-gallery">
@@ -274,7 +259,7 @@ const PackageDetail = ({ onBack }) => {
             </div>
 
             {/* Itinerary */}
-            <div className="section">
+            {/* <div className="section">
               <h2 className="section-title">Itinerary</h2>
               <div className="itinerary">
                 {packageData.itinerary.map((day, dayIndex) => (
@@ -294,7 +279,7 @@ const PackageDetail = ({ onBack }) => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Booking Sidebar */}
@@ -341,10 +326,10 @@ const PackageDetail = ({ onBack }) => {
                 </div>
 
                 <button className="book-now-btn">Book Now</button>
-                <a href="https://wa.me/919414166565" className="whatsapp-btn">
+                {/* <a href="https://wa.me/919414166565" className="whatsapp-btn">
                   <MessageCircle size={16} />
                   WhatsApp Now
-                </a>
+                </a> */}
               </div>
 
               <div className="contact-info">
@@ -352,9 +337,9 @@ const PackageDetail = ({ onBack }) => {
                 <p>Our Destination expert will be happy to help you resolve your queries for this tour.</p>
                 <div className="contact-details">
                   <Phone size={16} />
-                  <span>+91-9414166565, +91-8302997703</span>
+                  <span>+91-7737329071</span>
                 </div>
-                <div className="contact-hours">10:30 AM - 8:00 PM (Mon to Sat)</div>
+                <div className="contact-hours">10:30 AM - 8:00 PM (Monday to Sunday)</div>
               </div>
             </div>
           </div>
@@ -388,7 +373,6 @@ const PackageDetail = ({ onBack }) => {
                   <li>If cancellation are made 30 days before the date of travel then 25.0% of total tour cost will be charged as cancellation fees</li>
                   <li>If cancellation are made 15 days to 30 days before the date of travel then 50.0% of total tour cost will be charged as cancellation fees</li>
                   <li>If cancellation are made 0 days to 15 days before the date of travel then 100.0% of total tour cost will be charged as cancellation fees</li>
-                  <li>In the event of unforeseen weather conditions, union issues, government restrictions, or any other circumstances beyond human control, certain trips or activities may be cancelled. In such cases, alternate feasible options will be provided. However, a cash refund will not be available</li>
                 </ul>
               </div>
 
@@ -435,7 +419,7 @@ const PackageDetail = ({ onBack }) => {
         .package-detail {
           background: white;
           min-height: 100vh;
-          padding: 20px 0;
+          padding: 80px 0 20px 0;
         }
 
         .detail-header {

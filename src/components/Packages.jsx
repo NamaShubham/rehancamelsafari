@@ -5,32 +5,36 @@ const Packages = ({ onPackageClick }) => {
   const packages = [
     {
       id: "luxury-getaway",
-      title: "A Luxury Getaway Under the Stars",
-      duration: "01 Nights / 02 Days",
-      originalPrice: "INR 31,250",
-      price: "INR 25,000",
-      discount: "20% Off",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      title: "Camel Cart Safari",
+      duration: "1-2 Hours",
+      originalPrice: "INR 5,000",
+      price: "INR 25,00",
+      discount: "50% Off",
+      image: "/images/image2.jpg",
       features: [
-        "Private luxury stay in a desert oasis",
-        "Exclusive Jeep and Camel Safaris",
-        "Luxurious open-air bed under the stars",
-        "Intimate bonfire and gourmet dinner experience",
-        "Spectacular sunset and sunrise views"
+        "Authentic Rajasthani Experience",
+        "Comfortable Ride",
+        "Sunset / Sunrise Views",
+        "Village Visit",
+        "Cultural Interaction",
+        "Photo Opportunities",
       ]
     },
     {
       id: "arabian-night",
       title: "Arabian Night with Cultural Show",
       duration: "01 Nights / 02 Days",
-      price: "INR 3,250",
-      image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      originalPrice: "INR 12,000",
+      price: "INR 6000",
+      discount: "50% Off",
+      image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg",
       features: [
-        "Traditional desert camping experience",
-        "Folk dance and music performances",
-        "Camel safari at sunset",
-        "Authentic Rajasthani dinner",
-        "Overnight stay in desert camp"
+        "Enchanting Desert Experience",
+        "Traditional Rajasthani Welcome",
+        "Live Cultural Performances",
+        "Camel Ride at Sunset",
+        "Authentic Buffet Dinner",
+        "Bonfire & Entertainment",
       ]
     },
     {
@@ -38,57 +42,58 @@ const Packages = ({ onPackageClick }) => {
       title: "Dinner On The Dunes",
       duration: "1 Day",
       price: "INR 4,999",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      image: "/images/becf6b_d88e2f2d0ba24db0b67baae114c10cd6~mv2.avif",
       features: [
-        "Romantic dinner under starry sky",
-        "Camel ride to dinner location",
-        "Traditional Rajasthani cuisine",
-        "Cultural performances",
-        "Return transport included"
+        "Romantic Desert Dining",
+      "Sunset Camel or Camel Cart Ride",
+      "Traditional Rajasthani Welcome",
+      "Authentic Buffet Dinner",
+      "Live Folk Music",
+      "Bonfire Experience",
       ]
     },
     {
       id: "half-day",
-      title: "Half Day Tour",
-      duration: "Half Day",
-      price: "INR 2,599",
-      image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      features: [
-        "Pushkar Fort exploration",
-        "Patwon Ki Haveli visit",
-        "Local market tour",
-        "Traditional lunch",
-        "Professional guide included"
-      ]
-    },
-    {
-      id: "heritage-package",
-      title: "Heritage Pushkar Package",
-      duration: "02 Nights / 03 Days",
+      title: "Festival / Fair Special Package",
+      duration: "2 Nights / 3 Days",
       price: "INR 9,999",
-      image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+      image: "/images/pushkar-fair-tour-1.jpg",
       features: [
-        "Complete Pushkar sightseeing",
-        "Desert safari experience",
-        "Heritage hotel accommodation",
-        "All meals included",
-        "Professional guide and transport"
+        "Exclusive Camel & Camel Cart Safaris during the fair.",
+        "Access to the Pushkar Fairgrounds with guided tours of stalls, and cultural performances.",
+        "Special Cultural Shows",
+        "Local Cuisine Experience",
+        "Village & Market Visits"
       ]
     },
-    {
-      id: "luxury-safari",
-      title: "Luxury Overnight Safari",
-      duration: "01 Nights / 02 Days",
-      price: "INR 3,999",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      features: [
-        "Luxury desert camp stay",
-        "Jeep and camel safari combo",
-        "Cultural evening program",
-        "Premium dining experience",
-        "Sunrise/sunset viewing"
-      ]
-    }
+    // {
+    //   id: "heritage-package",
+    //   title: "Heritage Pushkar Package",
+    //   duration: "02 Nights / 03 Days",
+    //   price: "INR 9,999",
+    //   image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    //   features: [
+    //     "Complete Pushkar sightseeing",
+    //     "Desert safari experience",
+    //     "Heritage hotel accommodation",
+    //     "All meals included",
+    //     "Professional guide and transport"
+    //   ]
+    // },
+    // {
+    //   id: "luxury-safari",
+    //   title: "Luxury Overnight Safari",
+    //   duration: "01 Nights / 02 Days",
+    //   price: "INR 3,999",
+    //   image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    //   features: [
+    //     "Luxury desert camp stay",
+    //     "Jeep and camel safari combo",
+    //     "Cultural evening program",
+    //     "Premium dining experience",
+    //     "Sunrise/sunset viewing"
+    //   ]
+    // }
   ];
 
   return (
@@ -121,7 +126,6 @@ const Packages = ({ onPackageClick }) => {
                     <span className="original-price">{pkg.originalPrice}</span>
                   )}
                   <div className="current-price">
-                    <DollarSign size={20} />
                     <span>{pkg.price} per Adult</span>
                   </div>
                 </div>
@@ -141,18 +145,18 @@ const Packages = ({ onPackageClick }) => {
                 >
                   {(pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day') ? 'Know More' : 'Coming Soon'}
                 </button>
-                <a href="https://wa.me/919414166565" className="btn btn-whatsapp">
+                {/* <a href="https://wa.me/919414166565" className="btn btn-whatsapp">
                   <MessageCircle size={16} />
                   WhatsApp Now
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
         </div>
 
-        <div className="view-all">
+        {/* <div className="view-all">
           <a href="#" className="btn btn-secondary">View All Packages</a>
-        </div>
+        </div> */}
       </div>
 
       <style jsx>{`

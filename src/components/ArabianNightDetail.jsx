@@ -21,50 +21,53 @@ const ArabianNightDetail = ({ onBack }) => {
     title: "Arabian Night with Cultural Show",
     duration: "01 Nights 02 Days",
     location: "Pushkar",
-    price: "INR 3,250",
+    price: "INR 6,000",
     minimumGuests: 2,
     extraPersonCharge: "30%",
     images: [
-      "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg",
+      "/images/cultural-show-evening-entertainment-in-the-luxury-resort_r0R1F.jpeg",
+      "/images/cultural program.jpg",
+      "/images/77b794e9-cad4-467f-9c8a-f104ef690eaf.jpeg"
     ],
     highlights: [
-      "Traditional Welcome",
-      "Abandoned village (Kuldhara Village)",
-      "Camel Ride",
-      "Sunset in Dunes",
-      "Dinner with Bonfire",
-      "Cultural Program / Dancing and Singing",
-      "Stargazing with Camping"
+      "Enchanting Desert Experience",
+      "Traditional Rajasthani Welcome",
+      "Live Cultural Performances",
+      "Camel Ride at Sunset",
+      "Authentic Buffet Dinner",
+      "Bonfire & Entertainment",
+      "Star Gazing Experience",
+      "Comfortable Camp Setup",
+      "Family & Couple Friendly"
     ],
-    overview: "Explore the magnificence of the desert with the Arabian Night Cultural Show arranged by Rehan Camel Safari Pushkar. Get transported, discover an abandoned village, savour a camel ride lasting one hour and thirty minutes, and relish dinner while watching a Cultural program with folk dance music. You can spend the night gazing at the stars and wake up to a delicious breakfast before heading back to the city.",
+    overview: "Step into a world of magic and tradition with our Arabian Night with Cultural Show in Pushkar — an unforgettable evening that captures the soul of Rajasthan. Begin your adventure with a scenic camel ride at sunset, followed by a warm traditional welcome at our desert camp. As the night unfolds, immerse yourself in mesmerizing folk dances, live music, and fire performances beneath a canopy of stars. Enjoy a delicious Rajasthani buffet dinner served around a glowing bonfire, surrounded by the rhythmic beats of the desert. Whether you’re seeking romance, culture, or pure relaxation, this experience promises memories that will stay with you forever.",
     inclusions: [
-      "Transport facility",
-      "Camel ride to the sand dunes",
-      "Pickup/drop service to the city",
-      "Campfire & Dinner",
-      "Morning breakfast"
+      "Traditional welcome with tikka, garland",
+      "Camel / Camel Cart Ride at sunset",
+      "Cultural Show & Live Folk Performances",
+      "Fire dance and Kalbeliya (gypsy) performance",
+      "Buffet Dinner with Rajasthani & Indian dishes",
+      "Bonfire seating area with cozy ambiance",
+      "Tea, coffee & bottled water"
     ],
     exclusions: [
-      "Alcoholic drinks",
-      "Personal expenses",
-      "Travel Insurance",
-      "Extra charges for peak season",
-      "Any increase in government taxes and state taxes"
+      "Transportation from hotel or city center to the camp (available on request at extra cost)",
+      "Personal expenses (tips, souvenirs, etc.)",
+      "Travel insurance or medical assistance",
+      "Optional add-ons like private bonfire, luxury tent stay, or jeep safari (charged separately)",
     ],
-    itinerary: [
-      {
-        day: "Day 1",
-        title: "Arrival",
-        description: "Explore the beauty of the desert with our transport tour. Starting from 2:00 PM till 11:00 AM, this tour includes a visit to Kuldhara - an abandoned village. You can enjoy a one-hour-and-a-half camel ride and watch the sunset over the dunes.\n\nAfter the camel safari, you will return to the camping site where a charming evening awaits your arrival. A bonfire will be lit to greet you in a hospitable way. During the gala dinner, you can enjoy folk music and dance performances. Spend the night under the stars with proper arrangements like a bed, blankets and more."
-      },
-      {
-        day: "Day 2",
-        title: "Departure",
-        description: "Wake up to a delicious breakfast in the morning and go on a camel ride to the point before heading back to the city by Jeep. Our tour ensures that you have a memorable experience in the desert that you will cherish forever."
-      }
+     itinerary: [
+       {
+         day: "Day 1",
+         title: "Arrival & Desert Adventure",
+          description: "**Morning / Afternoon**\n\n• Arrival in Pushkar (transport arranged separately or self-arrival)\n\n• Check-in at hotel / camp or rest after travel\n\n• Explore nearby attractions if time allows (Pushkar Lake, Brahma Temple, local market)\n\n**Evening**\n\n• Transfer to desert camp (by jeep or arranged transport)\n\n• Sunset Camel or Camel Cart Ride across the dunes\n\n• Traditional Rajasthani welcome: tika, garland, and welcome drink\n\n• Relax at the camp with light refreshments\n\n• Arabian Night Cultural Show: Folk dances, Kalbeliya performance, and live music\n\n• Lavish Rajasthani buffet dinner by bonfire\n\n• Star gazing and desert photography\n\n• Overnight stay in desert camp (optional luxury tent upgrade available)"
+       },
+       {
+         day: "Day 2",
+         title: "Morning Desert Experience & Departure",
+          description: "**Early Morning**\n\n• Optional Sunrise Camel Ride to capture breathtaking desert views\n\n• Tea / coffee served at the camp\n\n• Relax at the camp, enjoy photography or short desert walk\n\n**Late Morning**\n\n• Breakfast at camp or hotel (depending on stay arrangement)\n\n• Check-out from camp/hotel\n\n**Afternoon**\n\n• Optional visit to local attractions:\n  - Pushkar Lake & Ghats\n  - Brahma Temple\n  - Local handicraft market for souvenirs\n\n• Departure from Pushkar to your onward destination"
+       },
     ]
   };
 
@@ -76,10 +79,10 @@ const ArabianNightDetail = ({ onBack }) => {
       image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
     {
-      title: "A Luxury Getaway Under the Stars",
-      duration: "01 Nights / 02 Days",
-      price: "INR 22500",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      title: "Camel Cart Safari",
+      duration: "1-2 Hours",
+      price: "INR 5,000",
+      image: "/images/image2.jpg",
     },
     {
       title: "Half Day Tour",
@@ -87,24 +90,24 @@ const ArabianNightDetail = ({ onBack }) => {
       price: "INR 2599",
       image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
     },
-    {
-      title: "Heritage Pushkar Package",
-      duration: "02 Nights / 03 Days",
-      price: "INR 9999",
-      image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      title: "Luxury Overnight Safari",
-      duration: "01 Nights / 02 Days",
-      price: "INR 3999",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      title: "Sunset Cultural Show with Gala Dinner",
-      duration: "1 Day",
-      price: "INR 1999",
-      image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    }
+    // {
+    //   title: "Heritage Pushkar Package",
+    //   duration: "02 Nights / 03 Days",
+    //   price: "INR 9999",
+    //   image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    // },
+    // {
+    //   title: "Luxury Overnight Safari",
+    //   duration: "01 Nights / 02 Days",
+    //   price: "INR 3999",
+    //   image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    // },
+    // {
+    //   title: "Sunset Cultural Show with Gala Dinner",
+    //   duration: "1 Day",
+    //   price: "INR 1999",
+    //   image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+    // }
   ];
 
   const nextImage = () => {
@@ -131,16 +134,6 @@ const ArabianNightDetail = ({ onBack }) => {
   return (
     <div className="package-detail">
       <div className="container">
-        {/* Header */}
-        <div className="detail-header">
-          <button onClick={onBack} className="back-button">
-            <ArrowLeft size={20} />
-            Back to Packages
-          </button>
-          <div className="breadcrumb">
-            <span>Tour Packages</span> / <span>{packageData.title}</span>
-          </div>
-        </div>
 
         {/* Image Gallery */}
         <div className="image-gallery">
@@ -252,9 +245,13 @@ const ArabianNightDetail = ({ onBack }) => {
                   <div key={dayIndex} className="day-section">
                     <h3 className="day-title">{day.day}: {day.title}</h3>
                     <div className="day-description">
-                      {day.description.split('\n\n').map((paragraph, pIndex) => (
-                        <p key={pIndex}>{paragraph}</p>
-                      ))}
+                      {day.description.split('\n\n').map((paragraph, pIndex) => {
+                        // Convert **text** to <strong>text</strong>
+                        const formattedParagraph = paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                        return (
+                          <p key={pIndex} dangerouslySetInnerHTML={{ __html: formattedParagraph }} />
+                        );
+                      })}
                     </div>
                   </div>
                 ))}
@@ -309,10 +306,10 @@ const ArabianNightDetail = ({ onBack }) => {
                 </div>
 
                 <button className="book-now-btn">Book Now</button>
-                <a href="https://wa.me/919414166565" className="whatsapp-btn">
+                {/* <a href="https://wa.me/919414166565" className="whatsapp-btn">
                   <MessageCircle size={16} />
                   WhatsApp Now
-                </a>
+                </a> */}
               </div>
 
               <div className="contact-info">
@@ -320,9 +317,9 @@ const ArabianNightDetail = ({ onBack }) => {
                 <p>Our Destination expert will be happy to help you resolve your queries for this tour.</p>
                 <div className="contact-details">
                   <Phone size={16} />
-                  <span>+91-9414166565, +91-8302997703</span>
+                  <span>+91-7737329071</span>
                 </div>
-                <div className="contact-hours">10:30 AM - 8:00 PM (Mon to Sat)</div>
+                <div className="contact-hours">10:30 AM - 8:00 PM (Mon to Sun)</div>
               </div>
             </div>
           </div>
@@ -356,7 +353,6 @@ const ArabianNightDetail = ({ onBack }) => {
                   <li>If cancellation are made 30 days before the date of travel then 25.0% of total tour cost will be charged as cancellation fees</li>
                   <li>If cancellation are made 15 days to 30 days before the date of travel then 50.0% of total tour cost will be charged as cancellation fees</li>
                   <li>If cancellation are made 0 days to 15 days before the date of travel then 100.0% of total tour cost will be charged as cancellation fees</li>
-                  <li>In the event of unforeseen weather conditions, union issues, government restrictions, or any other circumstances beyond human control, certain trips or activities may be cancelled. In such cases, alternate feasible options will be provided. However, a cash refund will not be available</li>
                 </ul>
               </div>
 
@@ -386,10 +382,10 @@ const ArabianNightDetail = ({ onBack }) => {
                     </div>
                     <div className="related-buttons">
                       <button className="btn-know-more">Know More</button>
-                      <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
+                      {/* <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
                         <MessageCircle size={14} />
                         WhatsApp Now
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -403,7 +399,7 @@ const ArabianNightDetail = ({ onBack }) => {
         .package-detail {
           background: white;
           min-height: 100vh;
-          padding: 20px 0;
+          padding: 80px 0 20px 0;
         }
 
         .detail-header {
@@ -666,8 +662,8 @@ const ArabianNightDetail = ({ onBack }) => {
 
         .day-description p {
           color: #666;
-          line-height: 1.6;
-          margin-bottom: 15px;
+          line-height: 1.4;
+          margin-bottom: 8px;
           margin-left: 20px;
         }
 

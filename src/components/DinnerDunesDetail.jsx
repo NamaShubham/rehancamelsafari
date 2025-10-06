@@ -28,31 +28,38 @@ const DinnerDunesDetail = ({ onBack }) => {
     startTime: "2:30 PM",
     endTime: "10:30 PM",
     images: [
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      "/images/becf6b_d88e2f2d0ba24db0b67baae114c10cd6~mv2.avif",
+      "/images/dinner-on-dunes.jpg",
+      "/images/dinner_on_the_1704782738.webp",
+      "/images/gorbandh-palace-dinner-at-sand-dunes-jaisalmer.jpg"
     ],
     highlights: [
-      "Traditional Welcome",
-      "Abandoned village and natural oasis",
-      "Camel Ride",
-      "Sunset in Dunes",
-      "Folk Dance and Singing",
-      "Candlelight Dinner"
+      "Romantic Desert Dining",
+      "Sunset Camel or Camel Cart Ride",
+      "Traditional Rajasthani Welcome",
+      "Authentic Buffet Dinner",
+      "Live Folk Music",
+      "Bonfire Experience",
+      "Perfect for Special Occasions",
+      "Memorable Photography",
+      "Comfort & Hospitality",
+      "Flexible Timings"
     ],
-    overview: "A sweet yet adventurous evening with the Candlelight Dinner on the Dunes in Pushkar. The tour takes you through Khaba Fort, a natural oasis and a camel ride to witness a romantic sunset. Enjoy a cultural dance and music program by local gypsies, followed by a delicious Candlelight Dinner under the stars.",
+    overview: "Immerse yourself in the romance and charm of the desert with our Dinner On The Dunes experience in Pushkar. This exclusive evening offers you a unique opportunity to dine under the starlit sky, surrounded by the tranquil beauty of golden sand dunes. Enjoy a serene camel ride or cart ride at sunset, followed by a candlelit gourmet dinner served right in the heart of the desert. With soft music, traditional Rajasthani hospitality, and the soothing desert breeze, this evening promises to be an unforgettable memory — perfect for couples, families, or special celebrations.",
     inclusions: [
-      "Transport facility",
-      "Camel ride to the sand dunes",
-      "Pickup/drop service to the city",
-      "Dinner"
+      "Transport to & from the desert dining location (hotel pickup/drop-off optional).",
+      "Sunset Camel or Camel Cart Ride to the dining site.",
+      "Traditional welcome with tika & garland.",
+      "Candlelit dinner under the stars with Rajasthani & multi-cuisine buffet.",
+      "Live folk music or soft instrumental background performance.",
+      "Bonfire experience with comfortable seating."
     ],
     exclusions: [
-      "Alcoholic drinks",
-      "Personal expenses",
-      "Travel Insurance",
-      "Extra charges for peak season"
+      "Alcoholic beverages & special drinks (available for purchase).",
+      "Personal expenses (souvenirs, tips, etc.).",
+      "Overnight stay (unless upgraded to a camping package).",
+      "Transport not included in basic package (unless chosen as add-on).",
+      "Photography & videography services (available at extra cost)."
     ],
     itinerary: [
       {
@@ -126,16 +133,6 @@ const DinnerDunesDetail = ({ onBack }) => {
   return (
     <div className="package-detail">
       <div className="container">
-        {/* Header */}
-        <div className="detail-header">
-          <button onClick={onBack} className="back-button">
-            <ArrowLeft size={20} />
-            Back to Packages
-          </button>
-          <div className="breadcrumb">
-            <span>Tour Packages</span> / <span>{packageData.title}</span>
-          </div>
-        </div>
 
         {/* Image Gallery */}
         <div className="image-gallery">
@@ -244,7 +241,7 @@ const DinnerDunesDetail = ({ onBack }) => {
             </div>
 
             {/* Itinerary */}
-            <div className="section">
+            {/* <div className="section">
               <h2 className="section-title">Itinerary</h2>
               <div className="itinerary">
                 {packageData.itinerary.map((day, dayIndex) => (
@@ -256,10 +253,10 @@ const DinnerDunesDetail = ({ onBack }) => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Timeline */}
-            <div className="section">
+            {/* <div className="section">
               <h2 className="section-title">Tour Timeline</h2>
               <div className="timeline">
                 <div className="timeline-item">
@@ -312,7 +309,7 @@ const DinnerDunesDetail = ({ onBack }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Booking Sidebar */}
@@ -362,10 +359,10 @@ const DinnerDunesDetail = ({ onBack }) => {
                 </div>
 
                 <button className="book-now-btn">Book Now</button>
-                <a href="https://wa.me/919414166565" className="whatsapp-btn">
+                {/* <a href="https://wa.me/919414166565" className="whatsapp-btn">
                   <MessageCircle size={16} />
                   WhatsApp Now
-                </a>
+                </a> */}
               </div>
 
               <div className="contact-info">
@@ -373,9 +370,9 @@ const DinnerDunesDetail = ({ onBack }) => {
                 <p>Our Destination expert will be happy to help you resolve your queries for this tour.</p>
                 <div className="contact-details">
                   <Phone size={16} />
-                  <span>+91-9414166565, +91-8302997703</span>
+                  <span>+91-7737329071</span>
                 </div>
-                <div className="contact-hours">10:30 AM - 8:00 PM (Mon to Sat)</div>
+                <div className="contact-hours">10:30 AM - 8:00 PM (Mon to Sun)</div>
               </div>
             </div>
           </div>
@@ -409,7 +406,6 @@ const DinnerDunesDetail = ({ onBack }) => {
                   <li>If cancellation are made 30 days before the date of travel then 25.0% of total tour cost will be charged as cancellation fees</li>
                   <li>If cancellation are made 15 days to 30 days before the date of travel then 50.0% of total tour cost will be charged as cancellation fees</li>
                   <li>If cancellation are made 0 days to 15 days before the date of travel then 100.0% of total tour cost will be charged as cancellation fees</li>
-                  <li>In the event of unforeseen weather conditions, union issues, government restrictions, or any other circumstances beyond human control, certain trips or activities may be cancelled. In such cases, alternate feasible options will be provided. However, a cash refund will not be available</li>
                 </ul>
               </div>
 
@@ -439,10 +435,10 @@ const DinnerDunesDetail = ({ onBack }) => {
                     </div>
                     <div className="related-buttons">
                       <button className="btn-know-more">Know More</button>
-                      <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
+                      {/* <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
                         <MessageCircle size={14} />
                         WhatsApp Now
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -456,7 +452,7 @@ const DinnerDunesDetail = ({ onBack }) => {
         .package-detail {
           background: white;
           min-height: 100vh;
-          padding: 20px 0;
+          padding: 80px 0 20px 0;
         }
 
         .detail-header {

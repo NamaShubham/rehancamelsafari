@@ -22,17 +22,18 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h2>Rehan Camel Safari</h2>
+            <button onClick={onHomeClick} className="logo-link">
+              <h2>Rehan Camel Safari</h2>
+            </button>
           </div>
           
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul>
-              <li><button onClick={onHomeClick} className="nav-link">Home</button></li>
-              <li><button onClick={onAboutClick} className="nav-link">About Us</button></li>
-              <li><a href="#packages" className="nav-link">Desert Safari</a></li>
+              {/* <li><a href="#packages" className="nav-link">Desert Safari</a></li> */}
               <li><a href="#tour-packages" className="nav-link">Tour Packages</a></li>
               <li><a href="#experiences" className="nav-link">Experiences</a></li>
               <li><button onClick={onGalleryClick} className="nav-link">Gallery</button></li>
+              <li><button onClick={onAboutClick} className="nav-link">About Us</button></li>
               <li><button onClick={onContactClick} className="nav-link">Contact Us</button></li>
             </ul>
           </nav>
@@ -40,7 +41,7 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
           <div className="header-contact">
             <a href="tel:+919414166565" className="contact-item">
               <Phone size={18} />
-              <span>+91-9414166565</span>
+              <span>+917737329071</span>
             </a>
             <a href="mailto:info@rehancamelsafari.com" className="contact-item">
               <Mail size={18} />
@@ -63,13 +64,13 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
           backdrop-filter: blur(10px);
           z-index: 1000;
           transition: all 0.3s ease;
-          padding: 15px 0;
+          padding: 8px 0;
         }
 
         .header.scrolled {
           background: rgba(255, 255, 255, 0.98);
           box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-          padding: 10px 0;
+          padding: 5px 0;
         }
 
         .header-content {
@@ -78,10 +79,23 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
           align-items: center;
         }
 
+        .logo-link {
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+        }
+
         .logo h2 {
           color: #f39c12;
           font-size: 1.8rem;
           font-weight: bold;
+          margin: 0;
+          transition: color 0.3s ease;
+        }
+
+        .logo-link:hover h2 {
+          color: #e67e22;
         }
 
         .nav ul {

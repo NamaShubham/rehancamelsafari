@@ -24,41 +24,40 @@ const HalfDayTourDetail = ({ onBack }) => {
     title: "Half Day Tour",
     duration: "Half Day",
     location: "Pushkar",
-    price: "INR 2,599",
+    price: "INR 9,999",
     minimumGuests: 2,
     extraPersonCharge: "30%",
     startTime: "2:00 PM",
-    endTime: "9:00 PM",
+    endTime: "10:00 PM",
     images: [
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      "/images/pushkar-fair-tour-1.jpg",
+      "/images/dancing-camel-pushkar-fair.jpg",
+      "/images/rajasthan-with-pushkar-fair-tour.jpg",
+      "/images/pushkarcamelfairdl1001.jpg"
     ],
     highlights: [
-      "Visit Monuments and villages",
-      "Kuldhara Village",
-      "Camel Ride",
-      "Sunset in Dunes",
-      "Cultural program",
-      "Dinner with Bonfire",
-      "Dancing and Singing"
+      "Exclusive Camel & Camel Cart Safaris during the fair days.",
+      "Access to the Pushkar Fairgrounds with guided tours of stalls, and cultural performances.",
+      "Traditional Rajasthani Welcome with tika.",
+      "Special Cultural Shows",
+      "Local Cuisine Experience",
+      "Village & Market Visits",
+      "Photography Opportunities",
+      "Bonfire & Entertainment"
     ],
-    overview: "One of the most popular outdoor activities in Pushkar is going on a tour of the Sand Dunes via camel. Rehan Camel Safari provides a Half-Day Tour package for those interested in experiencing an exciting Pushkar Desert Tour with Camels. The package is centred around the Thar Desert, Pushkar's main attraction and includes desert camping, cultural excursions, dune bashing and sightseeing.",
+    overview: "The Festival / Fair Special Package is your ultimate way to experience the world-famous Pushkar Camel Fair — a spectacular celebration of Rajasthani culture, color, and tradition. This exclusive package is designed to immerse you in the vibrant festivities, complete with camel safaris, cultural shows, traditional food, and unique shopping experiences. From thrilling desert rides to exploring bustling fairgrounds, this package offers a blend of adventure, culture, and festivity. Perfect for families, couples, and photography enthusiasts, it ensures you experience Pushkar at its most magical time of the year.",
     inclusions: [
-      "Transport facility",
-      "Camel ride to the sand dunes",
-      "Pickup/drop service to the city",
-      "Campfire Folk Music & Dance",
-      "Rajasthani Buffet Dinner"
+      "Camel / Camel Cart Safari during the fair.",
+      "Access to cultural shows & fairground events.",
+      "Rajasthani buffet dinner or thali during the package.",
+      "Welcome drink, tika, and garland.",
+      "Tea/coffee and bottled water."
     ],
     exclusions: [
-      "Alcoholic drinks",
-      "Personal expenses",
-      "Travel Insurance",
-      "Extra charges for peak season",
-      "Entrance fees",
-      "Any increase in the government taxes and state taxes"
+      "Transport to/from Pushkar and within the fair (unless arranged).",
+      "Alcoholic beverages & soft drinks.",
+      "Optional activities (jeep safari, hot air balloon ride, luxury camping).",
+      "Travel insurance or medical assistance."
     ],
     itinerary: [
       {
@@ -132,16 +131,6 @@ const HalfDayTourDetail = ({ onBack }) => {
   return (
     <div className="package-detail">
       <div className="container">
-        {/* Header */}
-        <div className="detail-header">
-          <button onClick={onBack} className="back-button">
-            <ArrowLeft size={20} />
-            Back to Packages
-          </button>
-          <div className="breadcrumb">
-            <span>Tour Packages</span> / <span>{packageData.title}</span>
-          </div>
-        </div>
 
         {/* Image Gallery */}
         <div className="image-gallery">
@@ -250,7 +239,7 @@ const HalfDayTourDetail = ({ onBack }) => {
             </div>
 
             {/* Itinerary */}
-            <div className="section">
+            {/* <div className="section">
               <h2 className="section-title">Itinerary</h2>
               <div className="itinerary">
                 {packageData.itinerary.map((day, dayIndex) => (
@@ -262,10 +251,10 @@ const HalfDayTourDetail = ({ onBack }) => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Tour Activities */}
-            <div className="section">
+            {/* <div className="section">
               <h2 className="section-title">Tour Activities</h2>
               <div className="activities-grid">
                 <div className="activity-card">
@@ -305,10 +294,10 @@ const HalfDayTourDetail = ({ onBack }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Timeline */}
-            <div className="section">
+            {/* <div className="section">
               <h2 className="section-title">Tour Timeline</h2>
               <div className="timeline">
                 <div className="timeline-item">
@@ -361,7 +350,7 @@ const HalfDayTourDetail = ({ onBack }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Booking Sidebar */}
@@ -411,10 +400,10 @@ const HalfDayTourDetail = ({ onBack }) => {
                 </div>
 
                 <button className="book-now-btn">Book Now</button>
-                <a href="https://wa.me/919414166565" className="whatsapp-btn">
+                {/* <a href="https://wa.me/919414166565" className="whatsapp-btn">
                   <MessageCircle size={16} />
                   WhatsApp Now
-                </a>
+                </a> */}
               </div>
 
               <div className="contact-info">
@@ -422,9 +411,9 @@ const HalfDayTourDetail = ({ onBack }) => {
                 <p>Our Destination expert will be happy to help you resolve your queries for this tour.</p>
                 <div className="contact-details">
                   <Phone size={16} />
-                  <span>+91-9414166565, +91-8302997703</span>
+                  <span>+91-7737329071</span>
                 </div>
-                <div className="contact-hours">10:30 AM - 8:00 PM (Mon to Sat)</div>
+                <div className="contact-hours">10:30 AM - 8:00 PM (Mon to Sun)</div>
               </div>
             </div>
           </div>
@@ -458,7 +447,6 @@ const HalfDayTourDetail = ({ onBack }) => {
                   <li>If cancellation are made 30 days before the date of travel then 25.0% of total tour cost will be charged as cancellation fees</li>
                   <li>If cancellation are made 15 days to 30 days before the date of travel then 50.0% of total tour cost will be charged as cancellation fees</li>
                   <li>If cancellation are made 0 days to 15 days before the date of travel then 100.0% of total tour cost will be charged as cancellation fees</li>
-                  <li>In the event of unforeseen weather conditions, union issues, government restrictions, or any other circumstances beyond human control, certain trips or activities may be cancelled. In such cases, alternate feasible options will be provided. However, a cash refund will not be available</li>
                 </ul>
               </div>
 
@@ -488,10 +476,10 @@ const HalfDayTourDetail = ({ onBack }) => {
                     </div>
                     <div className="related-buttons">
                       <button className="btn-know-more">Know More</button>
-                      <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
+                      {/* <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
                         <MessageCircle size={14} />
                         WhatsApp Now
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -505,7 +493,7 @@ const HalfDayTourDetail = ({ onBack }) => {
         .package-detail {
           background: white;
           min-height: 100vh;
-          padding: 20px 0;
+          padding: 80px 0 20px 0;
         }
 
         .detail-header {

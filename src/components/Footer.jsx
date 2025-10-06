@@ -19,17 +19,15 @@ const Footer = () => {
     'Experiences',
     'Pushkar Attractions',
     'Gallery',
-    'Blog',
-    'Contact Us'
+    // 'Blog',
+    // 'Contact Us'
   ];
 
   const tourPackages = [
-    'A Luxury Getaway Under the Stars',
+    'Camel Cart Safari',
     'Arabian Night with Cultural Show',
     'Dinner On The Dunes',
-    'Half Day Tour',
-    'Heritage Pushkar Package',
-    'Luxury Overnight Safari'
+    'Festival / Fair Special Package',
   ];
 
   return (
@@ -96,14 +94,14 @@ const Footer = () => {
                   <MapPin size={18} />
                   <div>
                     <strong>Address</strong>
-                    <p>Near National Handloom, Fort parking, Pushkar, Rajasthan 345001</p>
+                    <p>Near Brahma chowk, Badi Basti, Pushkar, Rajasthan 305022</p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <Phone size={18} />
                   <div>
                     <strong>Phone</strong>
-                    <p>+91-9414166565<br />+91-8302997703</p>
+                    <p>+91-7737329071</p>
                   </div>
                 </div>
                 <div className="contact-item">
@@ -114,10 +112,10 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              <a href="https://wa.me/919414166565" className="whatsapp-float">
+              {/* <a href="https://wa.me/919414166565" className="whatsapp-float">
                 <MessageCircle size={20} />
                 <span>WhatsApp Now</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
