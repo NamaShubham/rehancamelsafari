@@ -70,40 +70,22 @@ const HalfDayTourDetail = ({ onBack }) => {
 
   const relatedPackages = [
     {
-      title: "Dinner On The Dunes",
-      duration: "1 Day",
-      price: "INR 4999",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
       title: "Arabian Night with Cultural Show",
       duration: "01 Nights 02 Days",
-      price: "INR 3250",
-      image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      price: "INR 12000",
+      image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg"
     },
     {
-      title: "A Luxury Getaway Under the Stars",
-      duration: "01 Nights / 02 Days",
-      price: "INR 22500",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      title: "Camel Cart Safari",
+      duration: "1-2 Hours",
+      price: "INR 5,000",
+      image: "/images/image2.jpg",
     },
     {
-      title: "Heritage Pushkar Package",
-      duration: "02 Nights / 03 Days",
-      price: "INR 9999",
-      image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      title: "Luxury Overnight Safari",
-      duration: "01 Nights / 02 Days",
-      price: "INR 3999",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      title: "Sunset Cultural Show with Gala Dinner",
+      title: "Dinner On The Dunes",
       duration: "1 Day",
-      price: "INR 1999",
-      image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+      price: "INR 4,999",
+      image: "/images/becf6b_d88e2f2d0ba24db0b67baae114c10cd6~mv2.avif"
     }
   ];
 
@@ -411,7 +393,7 @@ const HalfDayTourDetail = ({ onBack }) => {
                 <p>Our Destination expert will be happy to help you resolve your queries for this tour.</p>
                 <div className="contact-details">
                   <Phone size={16} />
-                  <span>+91-7737329071</span>
+                  <span>+91-7737329071, +91-8905011430</span>
                 </div>
                 <div className="contact-hours">10:30 AM - 8:00 PM (Mon to Sun)</div>
               </div>

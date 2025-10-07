@@ -13,131 +13,122 @@ const Gallery = ({ onBack }) => {
     { id: 'camel-safari', name: 'Camel Safari', count: 12 },
     { id: 'jeep-safari', name: 'Jeep Safari', count: 10 },
     { id: 'camp', name: 'Camp', count: 15 },
-    { id: 'dinner-dunes', name: 'Dinner at Dunes', count: 8 },
-    { id: 'desert', name: 'Desert', count: 20 },
-    { id: 'monuments', name: 'Monuments', count: 12 },
-    { id: 'folk-dance', name: 'Folk Dance', count: 6 },
-    { id: 'other', name: 'Other', count: 9 }
+    // { id: 'dinner-dunes', name: 'Dinner at Dunes', count: 8 },
+    // { id: 'desert', name: 'Desert', count: 20 },
+    // { id: 'monuments', name: 'Monuments', count: 12 },
+    // { id: 'folk-dance', name: 'Folk Dance', count: 6 },
+    // { id: 'other', name: 'Other', count: 9 }
   ];
 
   const photos = [
     // Luxury Getaway
-    { id: 1, category: 'luxury-getaway', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Luxury Desert Camp at Night' },
-    { id: 2, category: 'luxury-getaway', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Luxury Tent Interior' },
-    { id: 3, category: 'luxury-getaway', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Stars View' },
-    { id: 4, category: 'luxury-getaway', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Luxury Desert Experience' },
-    { id: 5, category: 'luxury-getaway', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Luxury Setup' },
-    { id: 6, category: 'luxury-getaway', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Luxury Camp Fire' },
-    { id: 7, category: 'luxury-getaway', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Night Sky' },
-    { id: 8, category: 'luxury-getaway', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Luxury Desert Dining' },
+    { id: 1, category: 'luxury-getaway', src: '/images/winds-desert-camp-jaisalmer-rj.webp', alt: 'Luxury Desert Camp at Night' },
+    { id: 2, category: 'luxury-getaway', src: '/images/9d.jpg', alt: 'Luxury Tent Interior' },
+    { id: 3, category: 'luxury-getaway', src: '/images/77b794e9-cad4-467f-9c8a-f104ef690eaf.jpeg', alt: 'Desert Stars View' },
+    { id: 4, category: 'luxury-getaway', src: '/images/648b0b5da16b1.avif', alt: 'Luxury Desert Experience' },
+    { id: 5, category: 'luxury-getaway', src: '/images/a6.jpg', alt: 'Desert Luxury Setup' },
+    { id: 6, category: 'luxury-getaway', src: '/images/a6e85190-1028-41ea-aa7d-8185ad711376.jpeg', alt: 'Luxury Camp Fire' },
+    { id: 7, category: 'luxury-getaway', src: '/images/c05a8799-864d-4faf-be41-897342f16b47.jpeg', alt: 'Desert Night Sky' },
+    { id: 8, category: 'luxury-getaway', src: '/images/c9edbd0e-c054-459a-a4b8-7820696373bd.jpeg', alt: 'Luxury Desert Dining' },
+    { id: 9, category: 'luxury-getaway', src: '/images/cultural program.jpg', alt: 'Pushkar Cultural Program' },
+    { id: 10, category: 'luxury-getaway', src: '/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg', alt: 'Luxury Tent Interior' },
+    { id: 11, category: 'luxury-getaway', src: '/images/gorbandh-palace-dinner-at-sand-dunes-jaisalmer.jpg', alt: 'gorbandh palace dinner at sand dunes jaisalmer' },
+    { id: 12, category: 'luxury-getaway', src: '/images/000fecd9-8cc5-4bcf-814a-1ee0a6c63374.jpeg', alt: 'cultural program' },
 
     // Camel Safari
-    { id: 9, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camel Safari in Desert' },
-    { id: 10, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camel Caravan' },
-    { id: 11, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camel Riding Experience' },
-    { id: 12, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Camel Trek' },
-    { id: 13, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camel Safari Sunset' },
-    { id: 14, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Camel Ride' },
-    { id: 15, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camel Safari Group' },
-    { id: 16, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Camel Adventure' },
-    { id: 17, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camel Safari Experience' },
-    { id: 18, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Camel Safari' },
-    { id: 19, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Desert Travel' },
-    { id: 20, category: 'camel-safari', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camel Safari Journey' },
+    { id: 13, category: 'camel-safari', src: '/images/camel-safari-in-jaisalmer.jpg', alt: 'Camel Safari in Desert' },
+    { id: 14, category: 'camel-safari', src: '/images/camel-1.jpg', alt: 'Camel Caravan' },
+    { id: 15, category: 'camel-safari', src: '/images/f4.jpg', alt: 'Camel Riding Experience' },
+    { id: 16, category: 'camel-safari', src: '/images/726347553Bikaner_desert_safari_Main.jpg', alt: 'Desert Camel Trek' },
+    { id: 17, category: 'camel-safari', src: '/images/premium_photo-1661962542692-4fe7a4ad6b54.jpeg', alt: 'Camel Safari Sunset' },
+    { id: 18, category: 'camel-safari', src: '/images/ocone.jpg', alt: 'Traditional Camel Ride' },
+    { id: 19, category: 'camel-safari', src: '/images/csone.jpg', alt: 'Camel Safari Group' },
+    { id: 20, category: 'camel-safari', src: '/images/Jaisalmer_Desert_Safari_3_1438755627_HRhRBg.jpg', alt: 'Desert Camel Adventure' },
+    { id: 21, category: 'camel-safari', src: '/images/camel-safari-jaisalmer.jpg', alt: 'Camel Safari Experience' },
+    { id: 22, category: 'camel-safari', src: '/images/pushkar.jpg', alt: 'Pushkar Camel Safari' },
 
     // Jeep Safari
-    { id: 21, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Jeep Safari' },
-    { id: 22, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Off-Road Desert Adventure' },
-    { id: 23, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Jeep in Sand Dunes' },
-    { id: 24, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Jeep Tour' },
-    { id: 25, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Adventure Jeep Safari' },
-    { id: 26, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Thar Desert Jeep' },
-    { id: 27, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Exploration' },
-    { id: 28, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Jeep Safari Adventure' },
-    { id: 29, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Jeep Experience' },
-    { id: 30, category: 'jeep-safari', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Off-Road Desert Fun' },
+    { id: 23, category: 'jeep-safari', src: '/images/two-nights-three-days4.jpg', alt: 'Desert Jeep Safari' },
+    { id: 24, category: 'jeep-safari', src: '/images/two-nights-three-days5.jpg', alt: 'Off-Road Desert Adventure' },
+    { id: 25, category: 'jeep-safari', src: '/images/said-desert-jeep-safari.jpg', alt: 'Jeep in Sand Dunes' },
+    { id: 26, category: 'jeep-safari', src: '/images/thar-desert-safari.webp', alt: 'Desert Jeep Tour' },
+    { id: 27, category: 'jeep-safari', src: '/images/Desert-Jeep-Safari-in-Jaisalmer-Desert-Royal-Golden-Camp-11.jpg', alt: 'Adventure Jeep Safari' },
+    { id: 28, category: 'jeep-safari', src: '/images/3c7144f0-9457-4402-8cc3-b045b9aeb625.jpg', alt: 'Thar Desert Jeep' },
+    { id: 29, category: 'jeep-safari', src: '/images/two-nights-three-days2.jpg', alt: 'Desert Exploration' },
 
     // Camp
-    { id: 31, category: 'camp', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Camp Setup' },
-    { id: 32, category: 'camp', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Desert Tents' },
-    { id: 33, category: 'camp', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camp Fire Evening' },
-    { id: 34, category: 'camp', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Camping Experience' },
-    { id: 35, category: 'camp', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Luxury Desert Camp' },
-    { id: 36, category: 'camp', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camp Under Stars' },
-    { id: 37, category: 'camp', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Camp Life' },
-    { id: 38, category: 'camp', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Camp Setup' },
-    { id: 39, category: 'camp', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Camp Atmosphere' },
-    { id: 40, category: 'camp', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camp Fire Gathering' },
-    { id: 41, category: 'camp', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Tent Experience' },
-    { id: 42, category: 'camp', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Camp in Thar Desert' },
-    { id: 43, category: 'camp', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Camp Adventure' },
-    { id: 44, category: 'camp', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Authentic Desert Camping' },
-    { id: 45, category: 'camp', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Camp Experience' },
+    { id: 30, category: 'camp', src: '/images/image_processing20211118-4-pb5ebp.jpg', alt: 'Desert Camp Setup' },
+    { id: 31, category: 'camp', src: '/images/desert_camp-1024x685.webp', alt: 'Traditional Desert Tents' },
+    { id: 32, category: 'camp', src: '/images/IMG-20210901-WA0035_z5Vd0UUur.webp', alt: 'Camp Fire Evening' },
+    { id: 33, category: 'camp', src: '/images/399074701.jpg', alt: 'Desert Camping Experience' },
+    { id: 34, category: 'camp', src: '/images/648b0b5da16b1.avif', alt: 'Luxury Desert Camp' },
+    { id: 35, category: 'camp', src: '/images/patel-desert-camp.jpg', alt: 'Camp Under Stars' },
+    { id: 36, category: 'camp', src: '/images/DSCN0440.webp', alt: 'Desert Camp Life' },
 
     // Dinner at Dunes
-    { id: 46, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dinner Setup' },
-    { id: 47, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dinner Under Stars' },
-    { id: 48, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Desert Feast' },
-    { id: 49, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dining Experience' },
-    { id: 50, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dunes Dinner Ambiance' },
-    { id: 51, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Romantic Desert Dinner' },
-    { id: 52, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Culinary Experience' },
-    { id: 53, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dinner on Sand Dunes' },
+    // { id: 46, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dinner Setup' },
+    // { id: 47, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dinner Under Stars' },
+    // { id: 48, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Desert Feast' },
+    // { id: 49, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dining Experience' },
+    // { id: 50, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dunes Dinner Ambiance' },
+    // { id: 51, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Romantic Desert Dinner' },
+    // { id: 52, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Culinary Experience' },
+    // { id: 53, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dinner on Sand Dunes' },
 
     // Desert
-    { id: 54, category: 'desert', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Thar Desert Landscape' },
-    { id: 55, category: 'desert', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sand Dunes Sunset' },
-    { id: 56, category: 'desert', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Sunrise' },
-    { id: 57, category: 'desert', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Golden Desert Sands' },
-    { id: 58, category: 'desert', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dunes Pattern' },
-    { id: 59, category: 'desert', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Vast Desert Expanse' },
-    { id: 60, category: 'desert', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Beauty' },
-    { id: 61, category: 'desert', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Rajasthan Desert' },
-    { id: 62, category: 'desert', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Wilderness' },
-    { id: 63, category: 'desert', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sand Dunes Vista' },
-    { id: 64, category: 'desert', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Horizon' },
-    { id: 65, category: 'desert', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Serenity' },
-    { id: 66, category: 'desert', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Magic' },
-    { id: 67, category: 'desert', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Splendor' },
-    { id: 68, category: 'desert', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Wonder' },
-    { id: 69, category: 'desert', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Majesty' },
-    { id: 70, category: 'desert', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Grandeur' },
-    { id: 71, category: 'desert', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Tranquility' },
-    { id: 72, category: 'desert', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Adventure' },
-    { id: 73, category: 'desert', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Experience' },
+    // { id: 54, category: 'desert', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Thar Desert Landscape' },
+    // { id: 55, category: 'desert', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sand Dunes Sunset' },
+    // { id: 56, category: 'desert', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Sunrise' },
+    // { id: 57, category: 'desert', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Golden Desert Sands' },
+    // { id: 58, category: 'desert', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dunes Pattern' },
+    // { id: 59, category: 'desert', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Vast Desert Expanse' },
+    // { id: 60, category: 'desert', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Beauty' },
+    // { id: 61, category: 'desert', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Rajasthan Desert' },
+    // { id: 62, category: 'desert', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Wilderness' },
+    // { id: 63, category: 'desert', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sand Dunes Vista' },
+    // { id: 64, category: 'desert', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Horizon' },
+    // { id: 65, category: 'desert', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Serenity' },
+    // { id: 66, category: 'desert', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Magic' },
+    // { id: 67, category: 'desert', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Splendor' },
+    // { id: 68, category: 'desert', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Wonder' },
+    // { id: 69, category: 'desert', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Majesty' },
+    // { id: 70, category: 'desert', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Grandeur' },
+    // { id: 71, category: 'desert', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Tranquility' },
+    // { id: 72, category: 'desert', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Adventure' },
+    // { id: 73, category: 'desert', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Experience' },
 
     // Monuments
-    { id: 74, category: 'monuments', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Temple' },
-    { id: 75, category: 'monuments', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Brahma Temple' },
-    { id: 76, category: 'monuments', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Lake' },
-    { id: 77, category: 'monuments', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Historic Architecture' },
-    { id: 78, category: 'monuments', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Ancient Structures' },
-    { id: 79, category: 'monuments', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Cultural Heritage' },
-    { id: 80, category: 'monuments', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Religious Sites' },
-    { id: 81, category: 'monuments', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Architecture' },
-    { id: 82, category: 'monuments', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Historic Monuments' },
-    { id: 83, category: 'monuments', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Heritage' },
-    { id: 84, category: 'monuments', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sacred Places' },
-    { id: 85, category: 'monuments', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Cultural Sites' },
+    // { id: 74, category: 'monuments', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Temple' },
+    // { id: 75, category: 'monuments', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Brahma Temple' },
+    // { id: 76, category: 'monuments', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Lake' },
+    // { id: 77, category: 'monuments', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Historic Architecture' },
+    // { id: 78, category: 'monuments', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Ancient Structures' },
+    // { id: 79, category: 'monuments', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Cultural Heritage' },
+    // { id: 80, category: 'monuments', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Religious Sites' },
+    // { id: 81, category: 'monuments', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Architecture' },
+    // { id: 82, category: 'monuments', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Historic Monuments' },
+    // { id: 83, category: 'monuments', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Heritage' },
+    // { id: 84, category: 'monuments', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Sacred Places' },
+    // { id: 85, category: 'monuments', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Cultural Sites' },
 
     // Folk Dance
-    { id: 86, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Rajasthani Folk Dance' },
-    { id: 87, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Dance Performance' },
-    { id: 88, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Cultural Dance Show' },
-    { id: 89, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dance Performance' },
-    { id: 90, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Folk Music and Dance' },
-    { id: 91, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Entertainment' },
+    // { id: 86, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Rajasthani Folk Dance' },
+    // { id: 87, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Dance Performance' },
+    // { id: 88, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Cultural Dance Show' },
+    // { id: 89, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dance Performance' },
+    // { id: 90, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Folk Music and Dance' },
+    // { id: 91, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Entertainment' },
 
     // Other
-    { id: 92, category: 'other', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Wildlife' },
-    { id: 93, category: 'other', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Local Culture' },
-    { id: 94, category: 'other', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Flora' },
-    { id: 95, category: 'other', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Crafts' },
-    { id: 96, category: 'other', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Local Markets' },
-    { id: 97, category: 'other', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Life' },
-    { id: 98, category: 'other', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Fair' },
-    { id: 99, category: 'other', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Local Traditions' },
-    { id: 100, category: 'other', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Adventures' }
+    // { id: 92, category: 'other', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Wildlife' },
+    // { id: 93, category: 'other', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Local Culture' },
+    // { id: 94, category: 'other', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Flora' },
+    // { id: 95, category: 'other', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Crafts' },
+    // { id: 96, category: 'other', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Local Markets' },
+    // { id: 97, category: 'other', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Life' },
+    // { id: 98, category: 'other', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Pushkar Fair' },
+    // { id: 99, category: 'other', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Local Traditions' },
+    // { id: 100, category: 'other', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Adventures' }
   ];
 
   // Update category counts
@@ -177,11 +168,6 @@ const Gallery = ({ onBack }) => {
 
   return (
     <div className="gallery-page">
-      {/* Back Button */}
-      <button onClick={onBack} className="back-button">
-        <ArrowLeft size={20} />
-        Back to Home
-      </button>
 
       {/* Hero Section */}
       <section className="gallery-hero">
@@ -280,7 +266,7 @@ const Gallery = ({ onBack }) => {
         .gallery-hero {
           background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
           color: white;
-          padding: 120px 0 80px;
+          padding: 160px 0 80px;
           position: relative;
           overflow: hidden;
         }
@@ -292,7 +278,7 @@ const Gallery = ({ onBack }) => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+          background: url('/images/WhatsApp Image 2025-10-07 at 17.03.13.jpeg') center/cover;
           opacity: 0.2;
           z-index: 1;
         }

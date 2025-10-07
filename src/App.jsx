@@ -50,7 +50,7 @@ function App() {
       <div className="App">
         <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         <AboutUs onBack={showHome} />
-        <Footer />
+        <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
       </div>
     );
   }
@@ -60,7 +60,7 @@ function App() {
       <div className="App">
         <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         <Gallery onBack={showHome} />
-        <Footer />
+        <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
       </div>
     );
   }
@@ -70,7 +70,7 @@ function App() {
       <div className="App">
         <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         <Contact onBack={showHome} />
-        <Footer />
+        <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
       </div>
     );
   }
@@ -81,7 +81,7 @@ function App() {
         <div className="App">
           <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
           <PackageDetail onBack={showHome} />
-          <Footer />
+          <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         </div>
       );
     } else if (selectedPackage === 'arabian-night') {
@@ -89,7 +89,7 @@ function App() {
         <div className="App">
           <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
           <ArabianNightDetail onBack={showHome} />
-          <Footer />
+          <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         </div>
       );
     } else if (selectedPackage === 'dinner-dunes') {
@@ -97,7 +97,7 @@ function App() {
         <div className="App">
           <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
           <DinnerDunesDetail onBack={showHome} />
-          <Footer />
+          <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         </div>
       );
     } else if (selectedPackage === 'half-day') {
@@ -105,7 +105,7 @@ function App() {
         <div className="App">
           <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
           <HalfDayTourDetail onBack={showHome} />
-          <Footer />
+          <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         </div>
       );
     }
@@ -118,7 +118,7 @@ function App() {
       {/* <Features /> */}
       <Packages onPackageClick={showPackageDetail} />
       <Experiences />
-      <Footer />
+      <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
     </div>
   );
 }

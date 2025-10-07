@@ -244,19 +244,25 @@ const ImageSlider = () => {
 
         @media (max-width: 768px) {
           .image-slider {
-            height: 80vh;
+            height: 85vh;
+          }
+
+          .slide-text {
+            max-width: 95%;
+            padding: 0 20px;
           }
 
           .slide-title {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            line-height: 1.1;
           }
 
           .slide-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
           }
 
           .slide-description {
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin-bottom: 25px;
           }
 
@@ -270,34 +276,39 @@ const ImageSlider = () => {
             font-size: 14px;
             text-align: center;
           }
-
-
         }
 
         @media (max-width: 480px) {
           .image-slider {
-            height: 70vh;
+            height: 75vh;
+          }
+
+          .slide-text {
+            max-width: 95%;
+            padding: 0 15px;
           }
 
           .slide-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 10px;
+            line-height: 1.1;
           }
 
           .slide-subtitle {
-            font-size: 1rem;
+            font-size: 1.1rem;
             margin-bottom: 15px;
           }
 
           .slide-description {
-            font-size: 0.9rem;
+            font-size: 1rem;
             margin-bottom: 20px;
+            line-height: 1.5;
           }
 
-          .slide-text {
-            max-width: 90%;
+          .btn {
+            padding: 10px 20px;
+            font-size: 13px;
           }
-
         }
       `}</style>
     </div>

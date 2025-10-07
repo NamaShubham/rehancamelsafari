@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail, MessageCircle } from 'lucide-react';
 
 const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,8 +30,8 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
             <ul>
               {/* <li><a href="#packages" className="nav-link">Desert Safari</a></li> */}
-              <li><a href="#tour-packages" className="nav-link">Tour Packages</a></li>
-              <li><a href="#experiences" className="nav-link">Experiences</a></li>
+              {/* <li><a href="#packages" className="nav-link">Safari Packages</a></li>
+              <li><a href="#experiences" className="nav-link">Experiences</a></li> */}
               <li><button onClick={onGalleryClick} className="nav-link">Gallery</button></li>
               <li><button onClick={onAboutClick} className="nav-link">About Us</button></li>
               <li><button onClick={onContactClick} className="nav-link">Contact Us</button></li>
@@ -39,9 +39,12 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
           </nav>
 
           <div className="header-contact">
-            <a href="tel:+919414166565" className="contact-item">
+            <a href="tel:+917737329071" className="contact-item">
               <Phone size={18} />
               <span>+917737329071</span>
+            </a>
+            <a href="https://wa.me/917737329071" target="_blank" rel="noopener noreferrer" className="contact-item whatsapp">
+              <MessageCircle size={18} />
             </a>
             <a href="mailto:info@rehancamelsafari.com" className="contact-item">
               <Mail size={18} />
@@ -102,6 +105,12 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
           display: flex;
           list-style: none;
           gap: 30px;
+          align-items: center;
+        }
+
+        .nav ul li {
+          display: flex;
+          align-items: center;
         }
 
         .nav-link {
@@ -114,6 +123,11 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
           cursor: pointer;
           font-size: inherit;
           font-family: inherit;
+          padding: 8px 12px;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          height: 100%;
         }
 
         .nav-link:hover {
@@ -137,6 +151,10 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
 
         .contact-item:hover {
           color: #f39c12;
+        }
+
+        .contact-item.whatsapp:hover {
+          color: #25d366;
         }
 
         .contact-item span {

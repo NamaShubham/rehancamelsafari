@@ -5,50 +5,38 @@ const Experiences = () => {
     {
       title: "Camel Safari in Pushkar",
       description: "Enjoy a traditional and unique experience by taking a camel safari in Pushkar. Traverse through the Thar desert and witness the beautiful sand dunes, rustic villages and mesmerising sunset and sunrise views. This is an excellent opportunity to soak in the desert landscape while enjoying the company of these gentle creatures.",
-      image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/images/d9.jpg",
       icon: "🐪"
     },
     {
       title: "Desert Camping in Pushkar",
       description: "Glimpse the desert lifestyle by staying in a desert camp in Pushkar. Enjoy the tranquillity of the desert landscape while staying in luxury tents equipped with all modern amenities. Get a taste of Rajasthani cuisine, watch cultural performances, and gaze at the starry night sky for a truly memorable experience.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/images/a6.jpg",
       icon: "⛺"
     },
     {
       title: "Dinner on the Dunes",
       description: "Relish a romantic dinner under the starry night sky with Dinner on the Dunes in Pushkar. Savour delicious Rajasthani cuisine while enjoying the peaceful ambiance of the desert. This is an excellent opportunity to spend some quality time with your loved one while enjoying the natural beauty of the desert.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/images/romantic-dinner-on-dunes-jaisalmer-desert-adventure-camp.jpg",
       icon: "🍽️"
     },
     {
       title: "Jeep Safari in Pushkar",
       description: "Witness the Thar desert in style with a Jeep Safari in Pushkar. Hop on board a jeep and embark on an adventure to discover the hidden gems of the desert. The thrill of the bumpy ride combined with the stunning views of the desert landscape is an experience that shouldn't be missed.",
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/images/Desert-Jeep-Safari-in-Jaisalmer-Desert-Royal-Golden-Camp-11.jpg",
       icon: "🚙"
     },
     {
       title: "Folk Dance and Music in Pushkar",
       description: "Dip yourself in the vibrant and colourful culture of Rajasthan by attending a cultural program in Pushkar Desert. Witness traditional Rajasthani dances, music and performances that showcase the rich heritage of the state. This is an excellent opportunity to get a glimpse into the local culture and traditions.",
-      image: "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg",
       icon: "💃"
     },
     {
       title: "Quad Bike in Pushkar",
       description: "Experience the thrill of riding a Quad Bike in Pushkar. Explore the rugged terrain and undulating sand dunes of the Thar desert on these powerful and versatile machines. This is a great way to get your adrenaline pumping while enjoying the scenic beauty of the desert.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      image: "/images/quad-biking-in-sands.webp",
       icon: "🏍️"
-    },
-    {
-      title: "Parasailing in Pushkar",
-      description: "Soar high above the desert landscape with parasailing in Pushkar. Experience the thrill of flying while enjoying the panoramic views of the desert and the majestic Pushkar temples. This is an excellent opportunity to get a bird's eye view of the desert and feel the wind rushing through your hair.",
-      image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      icon: "🪂"
-    },
-    {
-      title: "Paramotoring in the Pushkar",
-      description: "Partake the thrill of flying with Paramotoring in Pushkar. Soar high above the desert on a motorised paraglider and enjoy the panoramic views of the desert landscape. This is an excellent opportunity to get a unique perspective of the desert and feel the rush of adrenaline.",
-      image: "https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      icon: "🛩️"
     }
   ];
 
@@ -193,19 +181,38 @@ const Experiences = () => {
           margin: 0;
         }
 
+        /* Mobile Responsive Styles */
+        @media (max-width: 1024px) {
+          .experiences-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+          }
+        }
+
         @media (max-width: 768px) {
           .experiences {
             padding: 60px 0;
           }
 
+          .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+          }
+
           .section-subtitle {
             margin-bottom: 40px;
             font-size: 1rem;
+            padding: 0 15px;
           }
 
           .experiences-grid {
             grid-template-columns: 1fr;
             gap: 25px;
+            padding: 0 15px;
+          }
+
+          .experience-card {
+            border-radius: 15px;
           }
 
           .experience-image {
@@ -217,12 +224,14 @@ const Experiences = () => {
           }
 
           .experience-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            line-height: 1.2;
           }
 
           .experience-description {
             font-size: 0.95rem;
             text-align: left;
+            line-height: 1.5;
           }
 
           .experience-icon {
@@ -232,11 +241,27 @@ const Experiences = () => {
 
         @media (max-width: 480px) {
           .experiences {
-            padding: 40px 0;
+            padding: 50px 0;
+          }
+
+          .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+          }
+
+          .section-subtitle {
+            font-size: 0.95rem;
+            padding: 0 10px;
+            margin-bottom: 35px;
           }
 
           .experiences-grid {
             gap: 20px;
+            padding: 0 10px;
+          }
+
+          .experience-image {
+            height: 180px;
           }
 
           .experience-content {
@@ -244,11 +269,13 @@ const Experiences = () => {
           }
 
           .experience-title {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
           }
 
           .experience-description {
             font-size: 0.9rem;
+            line-height: 1.4;
           }
 
           .experience-icon {

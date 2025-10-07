@@ -4,11 +4,6 @@ import { ArrowLeft, MapPin, Phone, Mail, Star, Users, Calendar, Award } from 'lu
 const AboutUs = ({ onBack }) => {
   return (
     <div className="about-us-page">
-      {/* Back Button */}
-      <button onClick={onBack} className="back-button">
-        <ArrowLeft size={20} />
-        Back to Home
-      </button>
 
       {/* Hero Section */}
       <section className="about-hero">
@@ -16,9 +11,6 @@ const AboutUs = ({ onBack }) => {
           <h1>About Us</h1>
           <h2>Rehan Camel Safari Pushkar</h2>
           <p className="hero-subtitle">Your Gateway to Authentic Desert Adventures</p>
-        </div>
-        <div className="about-hero-image">
-          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Desert Safari" />
         </div>
       </section>
 
@@ -57,7 +49,7 @@ const AboutUs = ({ onBack }) => {
                 <Users size={40} />
               </div>
               <div className="stat-content">
-                <h4>5000+</h4>
+                <h4>1700+</h4>
                 <p>Happy Travelers</p>
               </div>
             </div>
@@ -66,7 +58,7 @@ const AboutUs = ({ onBack }) => {
                 <Calendar size={40} />
               </div>
               <div className="stat-content">
-                <h4>15+</h4>
+                <h4>11+</h4>
                 <p>Years Experience</p>
               </div>
             </div>
@@ -75,11 +67,11 @@ const AboutUs = ({ onBack }) => {
                 <Star size={40} />
               </div>
               <div className="stat-content">
-                <h4>4.9</h4>
+                <h4>4.5</h4>
                 <p>Rating</p>
               </div>
             </div>
-            <div className="stat-item">
+            {/* <div className="stat-item">
               <div className="stat-icon">
                 <Award size={40} />
               </div>
@@ -87,7 +79,7 @@ const AboutUs = ({ onBack }) => {
                 <h4>100+</h4>
                 <p>Awards</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -97,10 +89,10 @@ const AboutUs = ({ onBack }) => {
         <div className="container">
           <div className="owner-content">
             <div className="owner-image">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Rehan - Owner" />
-              <div className="owner-badge">
+              <img src="/images/3c7144f0-9457-4402-8cc3-b045b9aeb625.jpg" alt="Rehan - Owner" />
+              {/* <div className="owner-badge">
                 <h4>About Owner</h4>
-              </div>
+              </div> */}
             </div>
             
             <div className="owner-text">
@@ -133,7 +125,7 @@ const AboutUs = ({ onBack }) => {
       </section>
 
       {/* Services Preview */}
-      <section className="services-preview">
+      {/* <section className="services-preview">
         <div className="container">
           <h2>Our Services</h2>
           <div className="services-grid">
@@ -171,36 +163,9 @@ const AboutUs = ({ onBack }) => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Contact Info */}
-      <section className="contact-info">
-        <div className="container">
-          <div className="contact-grid">
-            <div className="contact-item">
-              <MapPin size={24} />
-              <div>
-                <h4>Address</h4>
-                <p>Near Brahma Temple, Pushkar, Rajasthan 305022</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <Phone size={24} />
-              <div>
-                <h4>Contact</h4>
-                <p>+91-9414166565, +91-8302997703</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <Mail size={24} />
-              <div>
-                <h4>Email</h4>
-                <p>rehancamelsafari@gmail.com<br />info@rehancamelsafaripushkar.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       <style jsx>{`
         .about-us-page {
@@ -236,7 +201,7 @@ const AboutUs = ({ onBack }) => {
         .about-hero {
           background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
           color: white;
-          padding: 120px 0 80px;
+          padding: 280px 0 240px;
           position: relative;
           overflow: hidden;
         }
@@ -248,7 +213,7 @@ const AboutUs = ({ onBack }) => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+          background: url('/images/jaipur-pushkar-day-trip-with-optional-camel-safari.jpg') center/cover;
           opacity: 0.2;
           z-index: 1;
         }
@@ -501,14 +466,14 @@ const AboutUs = ({ onBack }) => {
         }
 
         .contact-info {
-          padding: 80px 0;
+          padding: 5px 0;
           background: #2c3e50;
           color: white;
         }
 
         .contact-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(3, 1fr);
           gap: 40px;
         }
 
@@ -525,11 +490,17 @@ const AboutUs = ({ onBack }) => {
         .contact-item svg {
           color: #f39c12;
           margin-top: 5px;
+          flex-shrink: 0;
+        }
+
+        .contact-item > div {
+          flex: 1;
+          min-width: 0;
         }
 
         .contact-item h4 {
           font-size: 1.3rem;
-          margin-bottom: 10px;
+          margin: 0 0 10px 0;
           color: #f39c12;
         }
 
@@ -537,11 +508,24 @@ const AboutUs = ({ onBack }) => {
           color: #ecf0f1;
           line-height: 1.6;
           margin: 0;
+          word-wrap: break-word;
         }
 
+        @media (max-width: 1024px) {
+          .contact-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        /* Mobile Responsive Styles */
         @media (max-width: 768px) {
+          .about-hero {
+            padding: 120px 0 60px;
+          }
+
           .about-hero h1 {
             font-size: 2.5rem;
+            line-height: 1.1;
           }
 
           .about-hero h2 {
@@ -552,21 +536,80 @@ const AboutUs = ({ onBack }) => {
             font-size: 1.1rem;
           }
 
+          .about-content {
+            padding: 60px 0;
+          }
+
+          .container {
+            padding: 0 15px;
+          }
+
           .about-main h2 {
             font-size: 2rem;
+            text-align: center;
           }
 
           .about-main h3 {
             font-size: 1.5rem;
+            text-align: center;
+          }
+
+          .about-main p {
+            font-size: 1rem;
+            text-align: left;
+          }
+
+          .stats-section {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+          }
+
+          .stat-item {
+            padding: 15px;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+          }
+
+          .stat-icon {
+            padding: 10px;
+          }
+
+          .stat-content h4 {
+            font-size: 2rem;
+          }
+
+          .owner-message {
+            padding: 60px 0;
           }
 
           .owner-content {
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 30px;
+            text-align: center;
+          }
+
+          .owner-image {
+            display: flex;
+            justify-content: center;
+          }
+
+          .owner-image img {
+            max-width: 300px;
           }
 
           .owner-text h2 {
             font-size: 2rem;
+          }
+
+          .owner-text p {
+            font-size: 1rem;
+            text-align: left;
+          }
+
+          .services-preview {
+            padding: 60px 0;
           }
 
           .services-preview h2 {
@@ -575,12 +618,113 @@ const AboutUs = ({ onBack }) => {
 
           .services-grid {
             grid-template-columns: 1fr;
+            gap: 25px;
+          }
+
+          .service-card {
+            margin: 0 10px;
+          }
+
+          .service-image {
+            height: 200px;
+          }
+
+          .service-content {
+            padding: 25px;
+          }
+
+          .service-content h3 {
+            font-size: 1.3rem;
+          }
+
+          .service-content p {
+            font-size: 0.95rem;
           }
 
           .back-button {
             position: static;
             margin: 20px;
             align-self: flex-start;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .about-hero {
+            padding: 100px 0 50px;
+          }
+
+          .about-hero h1 {
+            font-size: 2rem;
+          }
+
+          .about-hero h2 {
+            font-size: 1.5rem;
+          }
+
+          .hero-subtitle {
+            font-size: 1rem;
+          }
+
+          .about-content {
+            padding: 50px 0;
+          }
+
+          .about-main h2 {
+            font-size: 1.7rem;
+          }
+
+          .about-main h3 {
+            font-size: 1.3rem;
+          }
+
+          .stats-section {
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 30px 15px;
+          }
+
+          .stat-item {
+            padding: 12px;
+          }
+
+          .stat-content h4 {
+            font-size: 1.8rem;
+          }
+
+          .owner-message {
+            padding: 50px 0;
+          }
+
+          .owner-text h2 {
+            font-size: 1.7rem;
+          }
+
+          .owner-text p {
+            font-size: 0.95rem;
+          }
+
+          .services-preview {
+            padding: 50px 0;
+          }
+
+          .services-preview h2 {
+            font-size: 1.7rem;
+          }
+
+          .service-image {
+            height: 180px;
+          }
+
+          .service-content {
+            padding: 20px;
+          }
+
+          .service-content h3 {
+            font-size: 1.2rem;
+          }
+
+          .service-content p {
+            font-size: 0.9rem;
           }
         }
       `}</style>

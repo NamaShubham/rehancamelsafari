@@ -10,17 +10,27 @@ import {
   Youtube
 } from 'lucide-react';
 
-const Footer = () => {
+const Footer = ({ onHomeClick, onAboutClick, onGalleryClick, onContactClick }) => {
+  const handleNavigation = (navFunction) => {
+    if (navFunction) {
+      navFunction();
+      // Scroll to top after navigation
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   const quickLinks = [
-    'Home',
-    'About Us',
-    'Desert Safari in Pushkar',
-    'Pushkar Tour Package',
-    'Experiences',
-    'Pushkar Attractions',
-    'Gallery',
-    // 'Blog',
-    // 'Contact Us'
+    { name: 'Home', onClick: () => handleNavigation(onHomeClick) },
+    { name: 'About Us', onClick: () => handleNavigation(onAboutClick) },
+    // { name: 'Desert Safari in Pushkar', onClick: null },
+    // { name: 'Pushkar Tour Package', onClick: null },
+    // { name: 'Experiences', onClick: null },
+    // { name: 'Pushkar Attractions', onClick: null },
+    { name: 'Gallery', onClick: () => handleNavigation(onGalleryClick) },
+    // { name: 'Blog', onClick: null },
+    { name: 'Contact Us', onClick: () => handleNavigation(onContactClick) }
   ];
 
   const tourPackages = [
@@ -47,10 +57,10 @@ const Footer = () => {
                 Join us for an unforgettable adventure.
               </p>
               <div className="social-links">
-                <a href="#" className="social-link" aria-label="Facebook">
+                <a href="https://www.facebook.com/rehan.camelsafari" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className="social-link" aria-label="Instagram">
+                <a href="https://www.instagram.com/rehan_camel_safari_/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Instagram">
                   <Instagram size={20} />
                 </a>
                 <a href="#" className="social-link" aria-label="Twitter">
@@ -68,7 +78,13 @@ const Footer = () => {
               <ul className="footer-links">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <a href="#" className="footer-link">{link}</a>
+                    {link.onClick ? (
+                      <button onClick={link.onClick} className="footer-link footer-button">
+                        {link.name}
+                      </button>
+                    ) : (
+                      <a href="#" className="footer-link">{link.name}</a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -101,7 +117,7 @@ const Footer = () => {
                   <Phone size={18} />
                   <div>
                     <strong>Phone</strong>
-                    <p>+91-7737329071</p>
+                    <p>+91-7737329071 <br /> +91-8905011430</p>
                   </div>
                 </div>
                 <div className="contact-item">
@@ -228,6 +244,17 @@ const Footer = () => {
           padding-left: 5px;
         }
 
+        .footer-button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: inherit;
+          font-family: inherit;
+          color: inherit;
+          text-align: left;
+          padding: 0;
+        }
+
         .contact-info {
           display: flex;
           flex-direction: column;
@@ -321,18 +348,18 @@ const Footer = () => {
         @media (max-width: 1024px) {
           .footer-content {
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 40px;
           }
         }
 
         @media (max-width: 768px) {
           .footer-main {
-            padding: 40px 0 30px;
+            padding: 50px 0 30px;
           }
 
           .footer-content {
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 40px;
           }
 
           .footer-section {
@@ -340,62 +367,150 @@ const Footer = () => {
           }
 
           .footer-section:first-child {
-            text-align: left;
+            text-align: center;
+          }
+
+          .footer-logo h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+          }
+
+          .footer-description {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
           }
 
           .social-links {
             justify-content: center;
+            gap: 20px;
           }
 
-          .footer-section:first-child .social-links {
-            justify-content: flex-start;
+          .social-link {
+            width: 45px;
+            height: 45px;
+          }
+
+          .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+          }
+
+          .footer-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+          }
+
+          .footer-link, .footer-button {
+            font-size: 15px;
+            padding: 8px 0;
+            text-align: center;
           }
 
           .contact-info {
             align-items: center;
+            max-width: 350px;
+            margin: 0 auto;
           }
 
           .contact-item {
-            text-align: left;
-            max-width: 300px;
+            text-align: center;
+            flex-direction: column;
+            gap: 8px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin-bottom: 15px;
           }
 
-          .whatsapp-float {
-            margin: 0 auto;
+          .contact-item svg {
+            align-self: center;
+          }
+
+          .contact-item strong {
+            font-size: 15px;
+          }
+
+          .contact-item p {
+            font-size: 14px;
+            line-height: 1.5;
           }
 
           .footer-bottom-content {
             flex-direction: column;
             text-align: center;
-            gap: 15px;
+            gap: 20px;
           }
 
           .footer-bottom-links {
             justify-content: center;
+            gap: 25px;
+          }
+
+          .footer-bottom-link {
+            font-size: 14px;
           }
         }
 
         @media (max-width: 480px) {
           .footer-main {
-            padding: 30px 0 20px;
+            padding: 40px 0 25px;
+          }
+
+          .footer-content {
+            gap: 35px;
           }
 
           .footer-logo h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+          }
+
+          .footer-description {
+            font-size: 14px;
+            padding: 0 10px;
+          }
+
+          .footer-links {
+            grid-template-columns: 1fr;
+            gap: 12px;
+            padding: 0 20px;
+          }
+
+          .footer-link, .footer-button {
+            font-size: 14px;
+            padding: 10px 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin: 0 5px;
+          }
+
+          .social-links {
+            gap: 15px;
+          }
+
+          .social-link {
+            width: 40px;
+            height: 40px;
+          }
+
+          .contact-item {
+            padding: 12px;
+            margin-bottom: 12px;
           }
 
           .footer-bottom-links {
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
           }
 
-          .social-links {
-            gap: 10px;
-          }
-
-          .social-link {
-            width: 35px;
-            height: 35px;
+          .footer-bottom-link {
+            font-size: 13px;
           }
         }
       `}</style>

@@ -25,10 +25,32 @@ const Contact = ({ onBack }) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      // Create SMS message with form data
+      const smsMessage = `Hello! I'm interested in your camel safari services.
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject || 'General Inquiry'}
+
+Message: ${formData.message}
+
+Please contact me back. Thank you!`;
+
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(smsMessage);
+      
+      // Phone number for SMS (your number)
+      const phoneNumber = '917737329071'; // Your phone number without + symbol
+      
+      // Create SMS URL (sms: protocol)
+      const smsUrl = `sms:${phoneNumber}?body=${encodedMessage}`;
+      
+      // Open SMS app
+      window.location.href = smsUrl;
+      
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -36,6 +58,9 @@ const Contact = ({ onBack }) => {
         subject: '',
         message: ''
       });
+      
+      setSubmitStatus('success');
+      
     } catch (error) {
       setSubmitStatus('error');
     } finally {
@@ -46,11 +71,6 @@ const Contact = ({ onBack }) => {
 
   return (
     <div className="contact-page">
-      {/* Back Button */}
-      <button onClick={onBack} className="back-button">
-        <ArrowLeft size={20} />
-        Back to Home
-      </button>
 
       {/* Hero Section */}
       <section className="contact-hero">
@@ -159,7 +179,7 @@ const Contact = ({ onBack }) => {
                 {submitStatus === 'success' && (
                   <div className="success-message">
                     <MessageCircle size={20} />
-                    Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    SMS app will open with your message. Please send it to contact us directly!
                   </div>
                 )}
 
@@ -225,13 +245,24 @@ const Contact = ({ onBack }) => {
         <div className="container">
           <h2>Find Us</h2>
           <div className="map-container">
-            <div className="map-placeholder">
-              <MapPin size={60} />
+            <div className="google-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1617.6188082072556!2d74.55135985553366!3d26.48824294627156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396bdcdfbdfa9e01%3A0x97e66416557c7a07!2sRehan%20camel%20safari!5e0!3m2!1sen!2sin!4v1759870510041!5m2!1sen!2sin"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Rehan Camel Safari Location"
+              ></iframe>
+            </div>
+            <div className="map-info">
               <h3>Rehan Camel Safari</h3>
               <p>Near Brahma Temple, Pushkar, Rajasthan 305022</p>
               <div className="map-actions">
                 <a 
-                  href="https://maps.google.com/?q=Brahma+Temple+Pushkar+Rajasthan" 
+                  href="https://www.google.com/maps/place/Rehan+camel+safari/@26.4882429,74.5513599,17z/data=!3m1!4b1!4m6!3m5!1s0x396bdcdfbdfa9e01:0x97e66416557c7a07!8m2!3d26.4882429!4d74.5513599!16s%2Fg%2F11h0x8x8x8" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="map-btn"
@@ -239,7 +270,7 @@ const Contact = ({ onBack }) => {
                   Open in Google Maps
                 </a>
                 <a 
-                  href="tel:+919414166565" 
+                  href="tel:+917737329071" 
                   className="map-btn secondary"
                 >
                   Call for Directions
@@ -254,17 +285,17 @@ const Contact = ({ onBack }) => {
       <section className="quick-actions">
         <div className="container">
           <div className="quick-actions-grid">
-            <a href="tel:+919414166565" className="quick-action-card">
+            <a href="tel:+917737329071" className="quick-action-card">
               <Phone size={40} />
               <h3>Call Now</h3>
               <p>Speak directly with our team</p>
             </a>
-            <a href="https://wa.me/919414166565" className="quick-action-card whatsapp">
+            <a href="https://wa.me/917737329071" className="quick-action-card whatsapp">
               <MessageCircle size={40} />
               <h3>WhatsApp</h3>
               <p>Chat with us instantly</p>
             </a>
-            <a href="mailto:rehancamelsafari@gmail.com" className="quick-action-card">
+            <a href="mailto:shubham.nama@mydevteam.com" className="quick-action-card">
               <Mail size={40} />
               <h3>Email Us</h3>
               <p>Send us your requirements</p>
@@ -307,7 +338,7 @@ const Contact = ({ onBack }) => {
         .contact-hero {
           background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
           color: white;
-          padding: 120px 0 80px;
+          padding: 220px 0 200px;
           position: relative;
           overflow: hidden;
         }
@@ -319,7 +350,7 @@ const Contact = ({ onBack }) => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+          background: url('/images/images-2-1509295524t.jpg') center/cover;
           opacity: 0.2;
           z-index: 1;
         }
@@ -414,6 +445,9 @@ const Contact = ({ onBack }) => {
           font-size: 1rem;
           transition: all 0.3s ease;
           background: white;
+          color: #333;
+          width: 100%;
+          box-sizing: border-box;
         }
 
         .form-group input:focus,
@@ -569,37 +603,47 @@ const Contact = ({ onBack }) => {
           border-radius: 15px;
           overflow: hidden;
           box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          min-height: 400px;
         }
 
-        .map-placeholder {
-          padding: 80px 40px;
-          text-align: center;
+        .google-map {
+          position: relative;
+        }
+
+        .google-map iframe {
+          width: 100%;
+          height: 100%;
+          border-radius: 15px 0 0 15px;
+        }
+
+        .map-info {
+          padding: 40px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
-        .map-placeholder svg {
-          color: #f39c12;
-          margin-bottom: 20px;
-        }
-
-        .map-placeholder h3 {
+        .map-info h3 {
           font-size: 2rem;
           color: #2c3e50;
-          margin-bottom: 10px;
+          margin-bottom: 15px;
           font-weight: 600;
         }
 
-        .map-placeholder p {
+        .map-info p {
           color: #666;
           font-size: 1.1rem;
           margin-bottom: 30px;
+          line-height: 1.6;
         }
 
         .map-actions {
           display: flex;
-          gap: 20px;
-          justify-content: center;
-          flex-wrap: wrap;
+          flex-direction: column;
+          gap: 15px;
         }
 
         .map-btn {
@@ -708,13 +752,28 @@ const Contact = ({ onBack }) => {
             grid-template-columns: 1fr;
           }
 
+          .map-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px 1fr;
+          }
+
+          .google-map iframe {
+            border-radius: 15px 15px 0 0;
+          }
+
+          .map-info {
+            padding: 30px 20px;
+          }
+
           .map-actions {
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
           }
 
           .map-btn {
-            width: 200px;
+            width: auto;
+            padding: 12px 20px;
             text-align: center;
           }
 

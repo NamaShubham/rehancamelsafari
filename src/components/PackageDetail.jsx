@@ -125,30 +125,18 @@ const PackageDetail = ({ onBack }) => {
       price: "INR 12000",
       image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg"
     },
+      {
+        title: "Dinner On The Dunes",
+        duration: "1 Day",
+        price: "INR 4,999",
+        image: "/images/becf6b_d88e2f2d0ba24db0b67baae114c10cd6~mv2.avif"
+      },
     {
-      title: "Half Day Tour",
-      duration: "Half Day",
-      price: "INR 2599",
-      image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    {
-      title: "Dinner On The Dunes",
+      title: "Festival / Fair Special Package",
       duration: "02 Nights / 03 Days",
       price: "INR 9999",
-      image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    },
-    // {
-    //   title: "Luxury Overnight Safari",
-    //   duration: "01 Nights / 02 Days",
-    //   price: "INR 3999",
-    //   image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    // },
-    // {
-    //   title: "One and a Half Hours Jeep Safari Tour",
-    //   duration: "1.5 Hours",
-    //   price: "INR 3000",
-    //   image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-    // }
+      image: "/images/pushkar-fair-tour-1.jpg",
+    }
   ];
 
   const nextImage = () => {
@@ -337,7 +325,7 @@ const PackageDetail = ({ onBack }) => {
                 <p>Our Destination expert will be happy to help you resolve your queries for this tour.</p>
                 <div className="contact-details">
                   <Phone size={16} />
-                  <span>+91-7737329071</span>
+                  <span>+91-7737329071, +91-8905011430</span>
                 </div>
                 <div className="contact-hours">10:30 AM - 8:00 PM (Monday to Sunday)</div>
               </div>
@@ -402,10 +390,10 @@ const PackageDetail = ({ onBack }) => {
                     </div>
                     <div className="related-buttons">
                       <button className="btn-know-more">Know More</button>
-                      <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
+                      {/* <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
                         <MessageCircle size={14} />
                         WhatsApp Now
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>

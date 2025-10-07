@@ -8,7 +8,7 @@ const Packages = ({ onPackageClick }) => {
       title: "Camel Cart Safari",
       duration: "1-2 Hours",
       originalPrice: "INR 5,000",
-      price: "INR 25,00",
+      price: "INR 2,500",
       discount: "50% Off",
       image: "/images/image2.jpg",
       features: [
@@ -25,7 +25,7 @@ const Packages = ({ onPackageClick }) => {
       title: "Arabian Night with Cultural Show",
       duration: "01 Nights / 02 Days",
       originalPrice: "INR 12,000",
-      price: "INR 6000",
+      price: "INR 6,000",
       discount: "50% Off",
       image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg",
       features: [
@@ -312,9 +312,116 @@ const Packages = ({ onPackageClick }) => {
           margin-top: 50px;
         }
 
+        /* Mobile Responsive Styles */
+        @media (max-width: 1024px) {
+          .grid-3 {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+          }
+        }
+
         @media (max-width: 768px) {
+          .section {
+            padding: 60px 0;
+          }
+
+          .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+          }
+
+          .section-subtitle {
+            font-size: 1rem;
+            padding: 0 15px;
+            margin-bottom: 40px;
+          }
+
+          .grid-3 {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0 15px;
+          }
+
+          .package-card {
+            margin-bottom: 20px;
+          }
+
           .package-card.featured {
             transform: none;
+            border-color: #f39c12;
+          }
+
+          .package-image {
+            height: 180px;
+          }
+
+          .package-title {
+            font-size: 1.3rem;
+            line-height: 1.2;
+          }
+
+          .current-price {
+            font-size: 1.4rem;
+          }
+
+          .package-header,
+          .package-price,
+          .package-features,
+          .package-buttons {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          .package-features {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+
+          .package-features li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+          }
+
+          .package-buttons {
+            padding-bottom: 20px;
+          }
+
+          .btn {
+            padding: 12px 20px;
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .section {
+            padding: 50px 0;
+          }
+
+          .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+          }
+
+          .section-subtitle {
+            font-size: 0.95rem;
+            padding: 0 10px;
+            margin-bottom: 35px;
+          }
+
+          .grid-3 {
+            padding: 0 10px;
+            gap: 18px;
+          }
+
+          .package-image {
+            height: 160px;
+          }
+
+          .discount-badge {
+            top: 15px;
+            right: 15px;
+            padding: 4px 12px;
+            font-size: 0.8rem;
           }
 
           .package-title {
@@ -325,12 +432,30 @@ const Packages = ({ onPackageClick }) => {
             font-size: 1.3rem;
           }
 
+          .original-price {
+            font-size: 0.85rem;
+          }
+
           .package-header,
           .package-price,
           .package-features,
           .package-buttons {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+
+          .package-header {
+            padding-top: 20px;
+          }
+
+          .package-features li {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+          }
+
+          .btn {
+            padding: 10px 18px;
+            font-size: 13px;
           }
         }
       `}</style>
