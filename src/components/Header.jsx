@@ -46,7 +46,7 @@ const Header = ({ onAboutClick, onHomeClick, onGalleryClick, onContactClick }) =
             <a href="https://wa.me/917737329071" target="_blank" rel="noopener noreferrer" className="contact-item whatsapp">
               <MessageCircle size={18} />
             </a>
-            <a href="mailto:info@rehancamelsafari.com" className="contact-item">
+            <a href="mailto:rehancamelsafari@gmail.com" className="contact-item">
               <Mail size={18} />
             </a>
           </div>

@@ -10,14 +10,15 @@ const Gallery = ({ onBack }) => {
   const categories = [
     { id: 'all', name: 'All Photos', count: 0 },
     { id: 'luxury-getaway', name: 'A Luxury Getaway Under the Stars', count: 8 },
-    { id: 'camel-safari', name: 'Camel Safari', count: 12 },
+    { id: 'camel-safari', name: 'Camel Safari', count: 11 },
     { id: 'jeep-safari', name: 'Jeep Safari', count: 10 },
     { id: 'camp', name: 'Camp', count: 15 },
     // { id: 'dinner-dunes', name: 'Dinner at Dunes', count: 8 },
+    { id: 'horse-riding', name: 'Horse Riding', count: 8 },
     // { id: 'desert', name: 'Desert', count: 20 },
     // { id: 'monuments', name: 'Monuments', count: 12 },
     // { id: 'folk-dance', name: 'Folk Dance', count: 6 },
-    // { id: 'other', name: 'Other', count: 9 }
+    { id: 'other', name: 'Other', count: 3 }
   ];
 
   const photos = [
@@ -46,32 +47,33 @@ const Gallery = ({ onBack }) => {
     { id: 20, category: 'camel-safari', src: '/images/Jaisalmer_Desert_Safari_3_1438755627_HRhRBg.jpg', alt: 'Desert Camel Adventure' },
     { id: 21, category: 'camel-safari', src: '/images/camel-safari-jaisalmer.jpg', alt: 'Camel Safari Experience' },
     { id: 22, category: 'camel-safari', src: '/images/pushkar.jpg', alt: 'Pushkar Camel Safari' },
+    { id: 23, category: 'camel-safari', src: '/images/WhatsApp Image 2025-10-08 at 18.30.10.jpeg', alt: 'Pushkar Camel Safari' },
 
     // Jeep Safari
-    { id: 23, category: 'jeep-safari', src: '/images/two-nights-three-days4.jpg', alt: 'Desert Jeep Safari' },
-    { id: 24, category: 'jeep-safari', src: '/images/two-nights-three-days5.jpg', alt: 'Off-Road Desert Adventure' },
-    { id: 25, category: 'jeep-safari', src: '/images/said-desert-jeep-safari.jpg', alt: 'Jeep in Sand Dunes' },
-    { id: 26, category: 'jeep-safari', src: '/images/thar-desert-safari.webp', alt: 'Desert Jeep Tour' },
-    { id: 27, category: 'jeep-safari', src: '/images/Desert-Jeep-Safari-in-Jaisalmer-Desert-Royal-Golden-Camp-11.jpg', alt: 'Adventure Jeep Safari' },
-    { id: 28, category: 'jeep-safari', src: '/images/3c7144f0-9457-4402-8cc3-b045b9aeb625.jpg', alt: 'Thar Desert Jeep' },
-    { id: 29, category: 'jeep-safari', src: '/images/two-nights-three-days2.jpg', alt: 'Desert Exploration' },
+    { id: 24, category: 'jeep-safari', src: '/images/two-nights-three-days4.jpg', alt: 'Desert Jeep Safari' },
+    { id: 25, category: 'jeep-safari', src: '/images/two-nights-three-days5.jpg', alt: 'Off-Road Desert Adventure' },
+    { id: 26, category: 'jeep-safari', src: '/images/said-desert-jeep-safari.jpg', alt: 'Jeep in Sand Dunes' },
+    { id: 27, category: 'jeep-safari', src: '/images/thar-desert-safari.webp', alt: 'Desert Jeep Tour' },
+    { id: 28, category: 'jeep-safari', src: '/images/Desert-Jeep-Safari-in-Jaisalmer-Desert-Royal-Golden-Camp-11.jpg', alt: 'Adventure Jeep Safari' },
+    { id: 29, category: 'jeep-safari', src: '/images/3c7144f0-9457-4402-8cc3-b045b9aeb625.jpg', alt: 'Thar Desert Jeep' },
+    { id: 30, category: 'jeep-safari', src: '/images/two-nights-three-days2.jpg', alt: 'Desert Exploration' },
 
     // Camp
-    { id: 30, category: 'camp', src: '/images/image_processing20211118-4-pb5ebp.jpg', alt: 'Desert Camp Setup' },
-    { id: 31, category: 'camp', src: '/images/desert_camp-1024x685.webp', alt: 'Traditional Desert Tents' },
-    { id: 32, category: 'camp', src: '/images/IMG-20210901-WA0035_z5Vd0UUur.webp', alt: 'Camp Fire Evening' },
-    { id: 33, category: 'camp', src: '/images/399074701.jpg', alt: 'Desert Camping Experience' },
-    { id: 34, category: 'camp', src: '/images/648b0b5da16b1.avif', alt: 'Luxury Desert Camp' },
-    { id: 35, category: 'camp', src: '/images/patel-desert-camp.jpg', alt: 'Camp Under Stars' },
-    { id: 36, category: 'camp', src: '/images/DSCN0440.webp', alt: 'Desert Camp Life' },
+    { id: 31, category: 'camp', src: '/images/image_processing20211118-4-pb5ebp.jpg', alt: 'Desert Camp Setup' },
+    { id: 32, category: 'camp', src: '/images/desert_camp-1024x685.webp', alt: 'Traditional Desert Tents' },
+    { id: 33, category: 'camp', src: '/images/IMG-20210901-WA0035_z5Vd0UUur.webp', alt: 'Camp Fire Evening' },
+    { id: 34, category: 'camp', src: '/images/399074701.jpg', alt: 'Desert Camping Experience' },
+    { id: 35, category: 'camp', src: '/images/648b0b5da16b1.avif', alt: 'Luxury Desert Camp' },
+    { id: 36, category: 'camp', src: '/images/patel-desert-camp.jpg', alt: 'Camp Under Stars' },
+    { id: 37, category: 'camp', src: '/images/DSCN0440.webp', alt: 'Desert Camp Life' },
 
-    // Dinner at Dunes
-    // { id: 46, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dinner Setup' },
-    // { id: 47, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dinner Under Stars' },
-    // { id: 48, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Desert Feast' },
-    // { id: 49, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Dining Experience' },
-    // { id: 50, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dunes Dinner Ambiance' },
-    // { id: 51, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Romantic Desert Dinner' },
+    // Horse Riding
+    { id: 38, category: 'horse-riding', src: '/images/WhatsApp Image 2025-10-08 at 18.23.51.jpeg', alt: 'Black Horse' },
+    { id: 39, category: 'horse-riding', src: '/images/sunset-ride-july-2023.jpg', alt: 'Sunset Ride' },
+    { id: 40, category: 'horse-riding', src: '/images/WhatsApp Image 2025-10-08 at 18.24.58.jpeg', alt: 'Horse Riding' },
+    { id: 41, category: 'horse-riding', src: '/images/Horse-riding-in-pushkar-1.webp', alt: 'Horse Riding' },
+    { id: 42, category: 'horse-riding', src: '/images/WhatsApp Image 2025-10-08 at 18.29.34.jpeg', alt: 'Horse Riding' },
+    // { id: 43, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Romantic Desert Dinner' },
     // { id: 52, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Culinary Experience' },
     // { id: 53, category: 'dinner-dunes', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Dinner on Sand Dunes' },
 
@@ -120,9 +122,9 @@ const Gallery = ({ onBack }) => {
     // { id: 91, category: 'folk-dance', src: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Entertainment' },
 
     // Other
-    // { id: 92, category: 'other', src: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Wildlife' },
-    // { id: 93, category: 'other', src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Local Culture' },
-    // { id: 94, category: 'other', src: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Flora' },
+    { id: 92, category: 'other', src: '/images/WhatsApp Image 2025-10-08 at 18.27.56.jpeg', alt: 'Happy Clients' },
+    { id: 93, category: 'other', src: '/images/w3696h1960x0y488-1860badf.avif', alt: 'Local Culture' },
+    { id: 94, category: 'other', src: '/images/WhatsApp-Image-2024-11-15-at-19.14.57-1-780x470.jpeg', alt: 'Desert Flora' },
     // { id: 95, category: 'other', src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Traditional Crafts' },
     // { id: 96, category: 'other', src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Local Markets' },
     // { id: 97, category: 'other', src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', alt: 'Desert Life' },

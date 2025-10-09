@@ -9,6 +9,7 @@ import PackageDetail from './components/PackageDetail';
 import ArabianNightDetail from './components/ArabianNightDetail';
 import DinnerDunesDetail from './components/DinnerDunesDetail';
 import HalfDayTourDetail from './components/HalfDayTourDetail';
+import HorseRidingDetail from './components/HorseRidingDetail';
 import AboutUs from './components/AboutUs';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
@@ -22,6 +23,7 @@ function App() {
   const showPackageDetail = (packageId) => {
     setSelectedPackage(packageId);
     setCurrentView('package-detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const showHome = () => {
@@ -80,7 +82,7 @@ function App() {
       return (
         <div className="App">
           <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
-          <PackageDetail onBack={showHome} />
+          <PackageDetail onBack={showHome} onPackageClick={showPackageDetail} />
           <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         </div>
       );
@@ -88,7 +90,7 @@ function App() {
       return (
         <div className="App">
           <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
-          <ArabianNightDetail onBack={showHome} />
+          <ArabianNightDetail onBack={showHome} onPackageClick={showPackageDetail} />
           <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         </div>
       );
@@ -96,7 +98,7 @@ function App() {
       return (
         <div className="App">
           <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
-          <DinnerDunesDetail onBack={showHome} />
+          <DinnerDunesDetail onBack={showHome} onPackageClick={showPackageDetail} />
           <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         </div>
       );
@@ -104,7 +106,15 @@ function App() {
       return (
         <div className="App">
           <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
-          <HalfDayTourDetail onBack={showHome} />
+          <HalfDayTourDetail onBack={showHome} onPackageClick={showPackageDetail} />
+          <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
+        </div>
+      );
+    } else if (selectedPackage === 'horse-riding') {
+      return (
+        <div className="App">
+          <Header onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
+          <HorseRidingDetail onBack={showHome} onPackageClick={showPackageDetail} />
           <Footer onAboutClick={showAbout} onHomeClick={showHome} onGalleryClick={showGallery} onContactClick={showContact} />
         </div>
       );

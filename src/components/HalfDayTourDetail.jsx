@@ -16,13 +16,13 @@ import {
   Mountain
 } from 'lucide-react';
 
-const HalfDayTourDetail = ({ onBack }) => {
+const HalfDayTourDetail = ({ onBack, onPackageClick }) => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [guests, setGuests] = useState(2); // Minimum 2 people required
 
   const packageData = {
-    title: "Half Day Tour",
-    duration: "Half Day",
+    title: "Festival / Fair Special Package",
+    duration: "2 Nights / 3 Days",
     location: "Pushkar",
     price: "INR 9,999",
     minimumGuests: 2,
@@ -70,18 +70,21 @@ const HalfDayTourDetail = ({ onBack }) => {
 
   const relatedPackages = [
     {
+      id: "arabian-night",
       title: "Arabian Night with Cultural Show",
       duration: "01 Nights 02 Days",
       price: "INR 12000",
       image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg"
     },
     {
+      id: "luxury-getaway",
       title: "Camel Cart Safari",
       duration: "1-2 Hours",
       price: "INR 5,000",
       image: "/images/image2.jpg",
     },
     {
+      id: "dinner-dunes",
       title: "Dinner On The Dunes",
       duration: "1 Day",
       price: "INR 4,999",
@@ -457,7 +460,12 @@ const HalfDayTourDetail = ({ onBack }) => {
                       <span className="related-price">{pkg.price} + Tax</span>
                     </div>
                     <div className="related-buttons">
-                      <button className="btn-know-more">Know More</button>
+                      <button 
+                        className="btn-know-more"
+                        onClick={() => onPackageClick && onPackageClick(pkg.id)}
+                      >
+                        Know More
+                      </button>
                       {/* <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
                         <MessageCircle size={14} />
                         WhatsApp Now

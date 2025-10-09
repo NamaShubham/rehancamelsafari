@@ -10,87 +10,87 @@ import {
   ArrowLeft,
   ChevronLeft,
   ChevronRight,
-  AlertCircle,
-  Clock
+  AlertCircle
 } from 'lucide-react';
 
-const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
+const HorseRidingDetail = ({ onBack, onPackageClick }) => {
   const [selectedImage, setSelectedImage] = useState(0);
-  const [guests, setGuests] = useState(2); // Minimum 2 people required
+  const [guests, setGuests] = useState(1);
 
   const packageData = {
-    title: "Dinner On The Dunes",
-    duration: "1 Day",
+    title: "Horse Riding",
+    duration: "2-3 Hours",
     location: "Pushkar",
-    price: "INR 4,999",
-    minimumGuests: 2,
-    extraPersonCharge: "30%",
-    startTime: "2:30 PM",
-    endTime: "10:30 PM",
+    price: "INR 1,500",
+    originalPrice: "INR 3,000",
+    discount: "50% Off",
+    minimumGuests: 1,
+    extraPersonCharge: "per person",
     images: [
-      "/images/becf6b_d88e2f2d0ba24db0b67baae114c10cd6~mv2.avif",
-      "/images/dinner-on-dunes.jpg",
-      "/images/dinner_on_the_1704782738.webp",
-      "/images/gorbandh-palace-dinner-at-sand-dunes-jaisalmer.jpg"
+      "/images/sunset-ride-july-2023.jpg",
+      "/images/WhatsApp Image 2025-10-08 at 18.29.34.jpeg",
+      "/images/Horse-riding-in-pushkar-1.webp",
+      "/images/WhatsApp Image 2025-10-08 at 18.27.03.jpeg"
     ],
     highlights: [
-      "Romantic Desert Dining",
-      "Sunset Camel or Camel Cart Ride",
-      "Traditional Rajasthani Welcome",
-      "Authentic Buffet Dinner",
-      "Live Folk Music",
-      "Bonfire Experience",
-      "Perfect for Special Occasions",
-      "Memorable Photography",
-      "Comfort & Hospitality",
-      "Flexible Timings"
+      "Majestic Horse Riding Experience",
+      "Professional Guide & Trainer",
+      "Scenic Desert Routes",
+      "Photography Sessions",
+      "Safety Equipment Provided",
+      "Refreshments Included",
+      "Sunset / Sunrise Rides Available",
+      "Suitable for Beginners & Experts",
+      "Traditional Rajasthani Welcome"
     ],
-    overview: "Immerse yourself in the romance and charm of the desert with our Dinner On The Dunes experience in Pushkar. This exclusive evening offers you a unique opportunity to dine under the starlit sky, surrounded by the tranquil beauty of golden sand dunes. Enjoy a serene camel ride or cart ride at sunset, followed by a candlelit gourmet dinner served right in the heart of the desert. With soft music, traditional Rajasthani hospitality, and the soothing desert breeze, this evening promises to be an unforgettable memory — perfect for couples, families, or special celebrations.",
+    overview: "Experience the thrill of exploring Pushkar's stunning desert landscapes on horseback with our Horse Riding Safari. Perfect for adventure enthusiasts and nature lovers, this package offers a unique perspective of the Thar Desert's beauty. Guided by experienced trainers, you'll ride through scenic trails, golden sand dunes, and traditional villages while enjoying breathtaking views. Whether you're a beginner or an experienced rider, our well-trained horses and professional guides ensure a safe and memorable journey. Capture stunning photographs, feel the desert breeze, and create unforgettable memories on this majestic horse riding adventure.",
     inclusions: [
-      "Transport to & from the desert dining location (hotel pickup/drop-off optional).",
-      "Sunset Camel or Camel Cart Ride to the dining site.",
-      "Traditional welcome with tika & garland.",
-      "Candlelit dinner under the stars with Rajasthani & multi-cuisine buffet.",
-      "Live folk music or soft instrumental background performance.",
-      "Bonfire experience with comfortable seating."
+      "Well-trained and gentle horses suitable for all skill levels",
+      "Professional horse riding guide and trainer",
+      "Safety equipment (helmets, etc.)",
+      "2-3 hours scenic desert trail ride",
+      "Traditional Rajasthani welcome with tikka",
+      "Refreshments (tea/coffee and snacks)",
+      "Photography assistance and photo stops",
+      "Pick-up and drop from meeting point"
     ],
     exclusions: [
-      "Alcoholic beverages & special drinks (available for purchase).",
-      "Personal expenses (souvenirs, tips, etc.).",
-      "Overnight stay (unless upgraded to a camping package).",
-      "Transport not included in basic package (unless chosen as add-on).",
-      "Photography & videography services (available at extra cost)."
+      "Transportation from hotel to meeting point (available on request)",
+      "Personal expenses and tips",
+      "Travel insurance",
+      "Any meals not mentioned in inclusions",
+      "Additional horse riding time beyond package duration"
     ],
     itinerary: [
       {
-        day: "Day 1",
-        title: "Pushkar",
-        description: "Experience the magic of the Thar Desert with the Candlelight Dinner on the Dunes in Pushkar. Pickup at around 2:30 PM from Pushkar, the safari takes you through the beautiful Khaba Fort and a natural oasis. At the camel point, our friendly staff await to welcome you according to Rajasthani culture. After a camel ride through the desert, you'll stop at the dunes to witness a romantic sunset. The evening continues with a cultural dance and music program by local gypsies, followed by a Candlelight Dinner on the dunes. Savour drinks and a delicious meal according to your choice under the stars. The dinner on the dunes tour ends at around 10:30 PM dropping you to Pushkar city with sweet memories."
+        day: "Activity Schedule",
+        title: "Horse Riding Safari Experience",
+        description: "**Arrival & Briefing (30 minutes)**\n\n• Arrival at the horse riding camp\n\n• Traditional Rajasthani welcome with tikka and refreshments\n\n• Safety briefing and horse riding instructions by professional trainer\n\n• Introduction to your horse and basic riding techniques\n\n**Desert Trail Ride (1.5 - 2 hours)**\n\n• Begin your horse riding adventure through scenic desert trails\n\n• Explore sand dunes, rural villages, and picturesque landscapes\n\n• Multiple photo stops at scenic viewpoints\n\n• Experience sunset/sunrise rides (depending on timing)\n\n• Guided tour with interesting facts about local culture and wildlife\n\n**Refreshment Break & Departure (30 minutes)**\n\n• Return to the camp for light refreshments\n\n• Tea/coffee with traditional snacks\n\n• Photo session with your horse\n\n• Departure and drop-off at meeting point"
       }
     ]
   };
 
   const relatedPackages = [
     {
-      id: "arabian-night",
-      title: "Arabian Night with Cultural Show",
-      duration: "01 Nights 02 Days",
-      price: "INR 12000",
-      image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg"
-    },
-    {
       id: "luxury-getaway",
       title: "Camel Cart Safari",
       duration: "1-2 Hours",
-      price: "INR 5,000",
+      price: "INR 2,500",
       image: "/images/image2.jpg",
     },
     {
-      id: "half-day",
-      title: "Festival / Fair Special Package",
-      duration: "02 Nights / 03 Days",
-      price: "INR 9999",
-      image: "/images/pushkar-fair-tour-1.jpg",
+      id: "dinner-dunes",
+      title: "Dinner On The Dunes",
+      duration: "1 Day",
+      price: "INR 4,999",
+      image: "/images/becf6b_d88e2f2d0ba24db0b67baae114c10cd6~mv2.avif"
+    },
+    {
+      id: "arabian-night",
+      title: "Arabian Night with Cultural Show",
+      duration: "01 Nights / 02 Days",
+      price: "INR 6,000",
+      image: "/images/desert-rose-jaisalmer-luxury-tent-in-thar-desert_aMbKP.jpeg",
     }
   ];
 
@@ -104,15 +104,7 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
 
   const calculateTotalPrice = () => {
     const basePrice = parseInt(packageData.price.replace(/[^\d]/g, ''));
-    let totalPrice = basePrice * Math.min(guests, 2); // Base price for first 2 people
-    
-    if (guests > 2) {
-      const extraPeople = guests - 2;
-      const extraCharge = basePrice * 0.30; // 30% extra charge per additional person
-      totalPrice += extraPeople * extraCharge;
-    }
-    
-    return Math.round(totalPrice);
+    return basePrice * guests;
   };
 
   return (
@@ -160,18 +152,14 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
                   <MapPin size={16} />
                   <span>{packageData.location}</span>
                 </div>
-                <div className="meta-item">
-                  <Clock size={16} />
-                  <span>{packageData.startTime} - {packageData.endTime}</span>
-                </div>
               </div>
               
               {/* Special Note */}
               <div className="special-note">
                 <AlertCircle size={16} />
                 <span>
-                  <strong>Note:</strong> This package requires a minimum of {packageData.minimumGuests} people. 
-                  If there is 1 extra after {packageData.minimumGuests} people, an additional charge of {packageData.extraPersonCharge} will apply.
+                  <strong>Note:</strong> This package is priced at {packageData.price} per person. 
+                  Age requirement: Minimum 8 years. Children must be accompanied by adults.
                 </span>
               </div>
             </div>
@@ -224,77 +212,6 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
                 </div>
               </div>
             </div>
-
-            {/* Itinerary */}
-            {/* <div className="section">
-              <h2 className="section-title">Itinerary</h2>
-              <div className="itinerary">
-                {packageData.itinerary.map((day, dayIndex) => (
-                  <div key={dayIndex} className="day-section">
-                    <h3 className="day-title">{day.day}: {day.title}</h3>
-                    <div className="day-description">
-                      <p>{day.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
-            {/* Timeline */}
-            {/* <div className="section">
-              <h2 className="section-title">Tour Timeline</h2>
-              <div className="timeline">
-                <div className="timeline-item">
-                  <div className="timeline-time">2:30 PM</div>
-                  <div className="timeline-content">
-                    <h4>Pickup from Pushkar</h4>
-                    <p>Journey begins with pickup from your location in Pushkar city</p>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-time">3:00 PM</div>
-                  <div className="timeline-content">
-                    <h4>Khaba Fort & Natural Oasis</h4>
-                    <p>Visit the beautiful Khaba Fort and explore the natural oasis</p>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-time">4:00 PM</div>
-                  <div className="timeline-content">
-                    <h4>Traditional Welcome & Camel Ride</h4>
-                    <p>Traditional Rajasthani welcome followed by camel ride through the desert</p>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-time">6:00 PM</div>
-                  <div className="timeline-content">
-                    <h4>Romantic Sunset</h4>
-                    <p>Stop at the dunes to witness a breathtaking romantic sunset</p>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-time">7:30 PM</div>
-                  <div className="timeline-content">
-                    <h4>Cultural Program</h4>
-                    <p>Enjoy cultural dance and music program by local gypsies</p>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-time">8:30 PM</div>
-                  <div className="timeline-content">
-                    <h4>Candlelight Dinner</h4>
-                    <p>Delicious candlelight dinner under the stars with drinks and meal of your choice</p>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-time">10:30 PM</div>
-                  <div className="timeline-content">
-                    <h4>Return to Pushkar</h4>
-                    <p>Drop-off at your location in Pushkar city with sweet memories</p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
 
           {/* Booking Sidebar */}
@@ -302,7 +219,13 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
             <div className="price-card">
               <div className="price-section">
                 <div className="price-info">
-                  <div className="current-price">{packageData.price} <span>per Adult</span></div>
+                  <div className="current-price">{packageData.price} <span>per Person</span></div>
+                  {packageData.originalPrice && (
+                    <div className="original-price">{packageData.originalPrice}</div>
+                  )}
+                  {packageData.discount && (
+                    <div className="discount-badge">{packageData.discount}</div>
+                  )}
                 </div>
               </div>
 
@@ -329,11 +252,6 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
                       +
                     </button>
                   </div>
-                  {guests > 2 && (
-                    <div className="extra-charge-note">
-                      Extra {guests - 2} person(s): +{packageData.extraPersonCharge} each
-                    </div>
-                  )}
                 </div>
 
                 <div className="price-breakdown">
@@ -559,24 +477,27 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
           display: grid;
           grid-template-columns: 2fr 1fr;
           gap: 40px;
+          margin-bottom: 60px;
+        }
+
+        .main-content {
+          
         }
 
         .package-info {
-          margin-bottom: 30px;
+          margin-bottom: 40px;
         }
 
         .package-title {
           font-size: 2.5rem;
           color: #2c3e50;
           margin-bottom: 15px;
-          line-height: 1.2;
         }
 
         .package-meta {
           display: flex;
-          gap: 30px;
+          gap: 20px;
           margin-bottom: 20px;
-          flex-wrap: wrap;
         }
 
         .meta-item {
@@ -584,45 +505,45 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
           align-items: center;
           gap: 8px;
           color: #666;
-          font-size: 16px;
+          font-size: 14px;
         }
 
         .special-note {
           display: flex;
-          align-items: flex-start;
           gap: 10px;
           background: #fff3cd;
-          border: 1px solid #ffeaa7;
-          border-radius: 8px;
           padding: 15px;
+          border-radius: 8px;
           color: #856404;
-          font-size: 14px;
-          line-height: 1.5;
+          border-left: 4px solid #f39c12;
         }
 
         .special-note svg {
-          color: #f39c12;
           flex-shrink: 0;
           margin-top: 2px;
         }
 
         .section {
           margin-bottom: 40px;
+          padding-bottom: 40px;
+          border-bottom: 1px solid #eee;
+        }
+
+        .section:last-child {
+          border-bottom: none;
         }
 
         .section-title {
           font-size: 1.8rem;
           color: #2c3e50;
           margin-bottom: 20px;
-          border-bottom: 2px solid #f39c12;
-          padding-bottom: 10px;
         }
 
         .highlights-list {
           list-style: none;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 15px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
         }
 
         .highlights-list li {
@@ -630,26 +551,24 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
           align-items: flex-start;
           gap: 10px;
           color: #666;
-          line-height: 1.5;
         }
 
-        .highlights-list li svg {
+        .highlights-list svg {
           color: #27ae60;
           flex-shrink: 0;
-          margin-top: 2px;
+          margin-top: 3px;
         }
 
         .overview-text p {
           color: #666;
-          line-height: 1.7;
-          margin-bottom: 20px;
-          text-align: justify;
+          line-height: 1.8;
+          font-size: 15px;
         }
 
         .inclusion-exclusion {
           display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 40px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
         }
 
         .inclusions h3,
@@ -669,9 +588,9 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
           display: flex;
           align-items: flex-start;
           gap: 10px;
-          margin-bottom: 10px;
+          margin-bottom: 12px;
           color: #666;
-          line-height: 1.5;
+          font-size: 14px;
         }
 
         .check-icon {
@@ -687,7 +606,7 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
         }
 
         .itinerary {
-          space-y: 30px;
+          
         }
 
         .day-section {
@@ -697,111 +616,77 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
         .day-title {
           font-size: 1.4rem;
           color: #2c3e50;
-          margin-bottom: 20px;
-          padding: 15px;
-          background: #f8f9fa;
-          border-radius: 10px;
-          border-left: 4px solid #f39c12;
+          margin-bottom: 15px;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #f39c12;
         }
 
         .day-description p {
           color: #666;
-          line-height: 1.6;
+          line-height: 1.8;
           margin-bottom: 15px;
-          margin-left: 20px;
-          text-align: justify;
-        }
-
-        /* Timeline Styles */
-        .timeline {
-          position: relative;
-          padding-left: 30px;
-        }
-
-        .timeline::before {
-          content: '';
-          position: absolute;
-          left: 15px;
-          top: 0;
-          bottom: 0;
-          width: 2px;
-          background: #f39c12;
-        }
-
-        .timeline-item {
-          position: relative;
-          margin-bottom: 30px;
-          padding-left: 40px;
-        }
-
-        .timeline-item::before {
-          content: '';
-          position: absolute;
-          left: -8px;
-          top: 5px;
-          width: 16px;
-          height: 16px;
-          border-radius: 50%;
-          background: #f39c12;
-          border: 3px solid white;
-          box-shadow: 0 0 0 3px #f39c12;
-        }
-
-        .timeline-time {
-          font-size: 14px;
-          font-weight: bold;
-          color: #f39c12;
-          margin-bottom: 5px;
-        }
-
-        .timeline-content h4 {
-          color: #2c3e50;
-          font-size: 1.1rem;
-          margin-bottom: 5px;
-        }
-
-        .timeline-content p {
-          color: #666;
-          line-height: 1.5;
           font-size: 14px;
         }
 
         .booking-sidebar {
           position: sticky;
-          top: 20px;
+          top: 100px;
           height: fit-content;
         }
 
         .price-card {
           background: white;
-          border-radius: 15px;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          border: 1px solid #ddd;
+          border-radius: 10px;
           overflow: hidden;
         }
 
         .price-section {
-          background: linear-gradient(45deg, #f39c12, #e67e22);
-          color: white;
-          padding: 25px;
-          position: relative;
+          background: #f8f9fa;
+          padding: 20px;
+          border-bottom: 1px solid #ddd;
         }
 
         .price-info {
-          text-align: center;
+          position: relative;
         }
 
         .current-price {
           font-size: 2rem;
           font-weight: bold;
+          color: #f39c12;
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
         }
 
         .current-price span {
           font-size: 14px;
-          opacity: 0.9;
+          color: #666;
+          font-weight: normal;
+        }
+
+        .original-price {
+          text-decoration: line-through;
+          color: #999;
+          font-size: 1.1rem;
+          margin-top: 5px;
+        }
+
+        .discount-badge {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: #e74c3c;
+          color: white;
+          padding: 4px 12px;
+          border-radius: 20px;
+          font-size: 12px;
+          font-weight: bold;
         }
 
         .booking-form {
-          padding: 25px;
+          padding: 20px;
         }
 
         .form-group {
@@ -810,73 +695,67 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
 
         .form-group label {
           display: block;
-          margin-bottom: 8px;
           font-weight: 600;
           color: #2c3e50;
+          margin-bottom: 8px;
+          font-size: 14px;
         }
 
         .form-control {
           width: 100%;
-          padding: 12px;
-          border: 2px solid #eee;
-          border-radius: 8px;
-          font-size: 16px;
-          transition: border-color 0.3s;
-        }
-
-        .form-control:focus {
-          outline: none;
-          border-color: #f39c12;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 14px;
         }
 
         .guest-counter {
           display: flex;
           align-items: center;
-          justify-content: center;
           gap: 20px;
-          padding: 12px;
-          border: 2px solid #eee;
-          border-radius: 8px;
+          justify-content: center;
+          background: #f8f9fa;
+          padding: 10px;
+          border-radius: 5px;
         }
 
         .counter-btn {
-          width: 30px;
-          height: 30px;
-          border: none;
-          background: #f39c12;
-          color: white;
-          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          border: 1px solid #f39c12;
+          background: white;
+          color: #f39c12;
+          border-radius: 5px;
           cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           font-size: 18px;
           font-weight: bold;
+          transition: all 0.3s;
         }
 
         .counter-btn:hover {
-          background: #e67e22;
+          background: #f39c12;
+          color: white;
         }
 
         .guest-count {
           font-size: 18px;
-          font-weight: 600;
-          min-width: 20px;
+          font-weight: bold;
+          color: #2c3e50;
+          min-width: 30px;
           text-align: center;
         }
 
         .extra-charge-note {
           margin-top: 8px;
           font-size: 12px;
-          color: #f39c12;
-          font-weight: 600;
+          color: #666;
+          text-align: center;
         }
 
         .price-breakdown {
-          margin: 20px 0;
-          padding: 15px;
-          background: #f8f9fa;
-          border-radius: 8px;
+          border-top: 1px solid #eee;
+          padding-top: 15px;
+          margin-bottom: 20px;
         }
 
         .breakdown-row {
@@ -885,8 +764,13 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
           align-items: center;
         }
 
+        .breakdown-row span:first-child {
+          color: #666;
+          font-size: 14px;
+        }
+
         .total-price {
-          font-size: 1.3rem;
+          font-size: 1.5rem;
           font-weight: bold;
           color: #f39c12;
         }
@@ -894,34 +778,36 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
         .book-now-btn {
           width: 100%;
           padding: 15px;
-          background: linear-gradient(45deg, #f39c12, #e67e22);
+          background: #f39c12;
           color: white;
           border: none;
-          border-radius: 8px;
+          border-radius: 5px;
           font-size: 16px;
-          font-weight: bold;
+          font-weight: 600;
           cursor: pointer;
-          margin-bottom: 15px;
-          transition: all 0.3s;
+          transition: background 0.3s;
         }
 
         .book-now-btn:hover {
-          background: linear-gradient(45deg, #e67e22, #d35400);
-          transform: translateY(-2px);
+          background: #e67e22;
         }
 
         .whatsapp-btn {
           width: 100%;
+          padding: 12px;
+          background: #25D366;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
           gap: 8px;
-          padding: 15px;
-          background: #25D366;
-          color: white;
           text-decoration: none;
-          border-radius: 8px;
-          font-weight: bold;
+          margin-top: 10px;
           transition: background 0.3s;
         }
 
@@ -930,20 +816,21 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
         }
 
         .contact-info {
-          padding: 25px;
-          background: #f8f9fa;
+          padding: 20px;
+          border-top: 1px solid #eee;
         }
 
         .contact-info h4 {
+          font-size: 1.1rem;
           color: #2c3e50;
           margin-bottom: 10px;
         }
 
         .contact-info p {
           color: #666;
-          font-size: 14px;
-          line-height: 1.5;
+          font-size: 13px;
           margin-bottom: 15px;
+          line-height: 1.6;
         }
 
         .contact-details {
@@ -952,99 +839,90 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
           gap: 8px;
           color: #f39c12;
           font-weight: 600;
-          margin-bottom: 5px;
+          font-size: 14px;
+          margin-bottom: 8px;
         }
 
         .contact-hours {
-          font-size: 12px;
           color: #666;
+          font-size: 12px;
         }
 
-        /* Policies Section */
         .policies-section {
           background: #f8f9fa;
           padding: 60px 0;
-          margin-top: 40px;
+          margin-top: 60px;
         }
 
         .policies-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(2, 1fr);
           gap: 30px;
+          margin-top: 30px;
         }
 
         .policy-card {
           background: white;
-          padding: 30px;
-          border-radius: 15px;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-          transition: transform 0.3s ease;
-        }
-
-        .policy-card:hover {
-          transform: translateY(-5px);
+          padding: 25px;
+          border-radius: 10px;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .policy-card h3 {
+          font-size: 1.2rem;
           color: #2c3e50;
-          font-size: 1.3rem;
-          margin-bottom: 20px;
-          border-bottom: 2px solid #f39c12;
-          padding-bottom: 10px;
+          margin-bottom: 15px;
         }
 
         .policy-card ul {
           list-style: none;
-          padding: 0;
         }
 
         .policy-card li {
           color: #666;
-          line-height: 1.6;
-          margin-bottom: 12px;
+          font-size: 14px;
+          line-height: 1.8;
+          margin-bottom: 10px;
           padding-left: 20px;
           position: relative;
         }
 
         .policy-card li::before {
           content: '•';
-          color: #f39c12;
-          font-weight: bold;
           position: absolute;
           left: 0;
+          color: #f39c12;
+          font-weight: bold;
         }
 
-        /* Related Packages Section */
         .related-packages {
           padding: 60px 0;
-          background: white;
         }
 
         .related-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 25px;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          margin-top: 30px;
         }
 
         .related-package-card {
           background: white;
-          border-radius: 15px;
-          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+          border-radius: 10px;
           overflow: hidden;
-          transition: all 0.3s ease;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          transition: transform 0.3s;
         }
 
         .related-package-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
         .related-image {
           width: 100%;
-          height: 160px;
+          height: 200px;
           background-size: cover;
           background-position: center;
-          background-repeat: no-repeat;
         }
 
         .related-content {
@@ -1053,65 +931,62 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
 
         .related-title {
           font-size: 1.1rem;
-          font-weight: bold;
           color: #2c3e50;
-          margin-bottom: 12px;
-          line-height: 1.3;
+          margin-bottom: 10px;
         }
 
         .related-meta {
           display: flex;
           justify-content: space-between;
-          align-items: center;
           margin-bottom: 15px;
         }
 
         .related-duration {
           color: #666;
-          font-size: 0.9rem;
+          font-size: 13px;
         }
 
         .related-price {
           color: #f39c12;
-          font-weight: bold;
-          font-size: 1rem;
+          font-weight: 600;
+          font-size: 14px;
         }
 
         .related-buttons {
           display: flex;
-          flex-direction: column;
-          gap: 8px;
+          gap: 10px;
         }
 
         .btn-know-more {
-          padding: 10px 16px;
-          background: linear-gradient(45deg, #f39c12, #e67e22);
+          flex: 1;
+          padding: 10px;
+          background: #f39c12;
           color: white;
           border: none;
-          border-radius: 6px;
+          border-radius: 5px;
           font-size: 14px;
-          font-weight: bold;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: background 0.3s;
         }
 
         .btn-know-more:hover {
-          background: linear-gradient(45deg, #e67e22, #d35400);
-          transform: translateY(-1px);
+          background: #e67e22;
         }
 
         .btn-whatsapp-small {
+          flex: 1;
+          padding: 10px;
+          background: #25D366;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 14px;
+          cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 6px;
-          padding: 10px 16px;
-          background: #25D366;
-          color: white;
+          gap: 5px;
           text-decoration: none;
-          border-radius: 6px;
-          font-size: 14px;
-          font-weight: bold;
           transition: background 0.3s;
         }
 
@@ -1119,34 +994,14 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
           background: #128C7E;
         }
 
+        /* Responsive Styles */
         @media (max-width: 1024px) {
           .detail-content {
             grid-template-columns: 1fr;
           }
-          
+
           .booking-sidebar {
             position: static;
-            order: -1;
-          }
-        }
-
-        @media (max-width: 768px) {
-          .package-title {
-            font-size: 2rem;
-          }
-
-          .package-meta {
-            flex-direction: column;
-            gap: 15px;
-          }
-
-          .inclusion-exclusion {
-            grid-template-columns: 1fr;
-            gap: 30px;
-          }
-
-          .thumbnail-grid {
-            grid-template-columns: repeat(2, 1fr);
           }
 
           .policies-grid {
@@ -1154,35 +1009,69 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
           }
 
           .related-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 768px) {
+          .package-detail {
+            padding: 60px 0 20px 0;
+          }
+
+          .package-title {
+            font-size: 2rem;
+          }
+
+          .main-image {
+            height: 250px;
+          }
+
+          .thumbnail-grid {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+          }
+
+          .thumbnail-grid img {
+            height: 60px;
+          }
+
+          .highlights-list {
             grid-template-columns: 1fr;
           }
 
-          .timeline {
-            padding-left: 20px;
+          .inclusion-exclusion {
+            grid-template-columns: 1fr;
           }
 
-          .timeline-item {
-            padding-left: 30px;
+          .section-title {
+            font-size: 1.5rem;
+          }
+
+          .related-grid {
+            grid-template-columns: 1fr;
           }
         }
 
         @media (max-width: 480px) {
-          .policies-section,
-          .related-packages {
-            padding: 40px 0;
+          .package-title {
+            font-size: 1.5rem;
           }
 
-          .policy-card,
-          .related-content {
-            padding: 20px;
+          .package-meta {
+            flex-direction: column;
+            gap: 10px;
           }
 
-          .related-image {
-            height: 140px;
+          .main-image {
+            height: 200px;
           }
 
-          .timeline-item {
-            padding-left: 25px;
+          .thumbnail-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .current-price {
+            font-size: 1.5rem;
           }
         }
       `}</style>
@@ -1190,4 +1079,4 @@ const DinnerDunesDetail = ({ onBack, onPackageClick }) => {
   );
 };
 
-export default DinnerDunesDetail;
+export default HorseRidingDetail;

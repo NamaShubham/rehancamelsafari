@@ -199,8 +199,8 @@ Please contact me back. Thank you!`;
                   <h3>Phone</h3>
                 </div>
                 <div className="contact-card-content">
-                  <a href="tel:+919414166565">+91-9414166565</a>
-                  <a href="tel:+918302997703">+91-8302997703</a>
+                  <a href="tel:+919414166565">+91-7737329071</a>
+                  <a href="tel:+918302997703">+91-8905011430</a>
                 </div>
               </div>
 
@@ -211,7 +211,7 @@ Please contact me back. Thank you!`;
                 </div>
                 <div className="contact-card-content">
                   <a href="mailto:rehancamelsafari@gmail.com">rehancamelsafari@gmail.com</a>
-                  <a href="mailto:info@rehancamelsafaripushkar.com">info@rehancamelsafaripushkar.com</a>
+                  {/* <a href="mailto:info@rehancamelsafaripushkar.com">info@rehancamelsafaripushkar.com</a> */}
                 </div>
               </div>
 

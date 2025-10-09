@@ -47,7 +47,7 @@ const Hero = () => {
 
           <div className="hero-buttons">
             <a href="#packages" className="btn btn-primary">Explore Packages</a>
-            <a href="https://wa.me/919414166565" className="btn btn-whatsapp">WhatsApp Now</a>
+            <a href="https://wa.me/917737329071" className="btn btn-whatsapp">WhatsApp Now</a>
           </div>
         </div>
       </div>

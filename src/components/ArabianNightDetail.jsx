@@ -13,7 +13,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 
-const ArabianNightDetail = ({ onBack }) => {
+const ArabianNightDetail = ({ onBack, onPackageClick }) => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [guests, setGuests] = useState(2); // Minimum 2 people required
 
@@ -73,18 +73,21 @@ const ArabianNightDetail = ({ onBack }) => {
 
   const relatedPackages = [
     {
+      id: "dinner-dunes",
       title: "Dinner On The Dunes",
       duration: "1 Day",
       price: "INR 4,999",
       image: "/images/becf6b_d88e2f2d0ba24db0b67baae114c10cd6~mv2.avif"
     },
     {
+      id: "luxury-getaway",
       title: "Camel Cart Safari",
       duration: "1-2 Hours",
       price: "INR 5,000",
       image: "/images/image2.jpg",
     },
     {
+      id: "half-day",
       title: "Festival / Fair Special Package",
       duration: "02 Nights / 03 Days",
       price: "INR 9999",
@@ -363,7 +366,12 @@ const ArabianNightDetail = ({ onBack }) => {
                       <span className="related-price">{pkg.price} + Tax</span>
                     </div>
                     <div className="related-buttons">
-                      <button className="btn-know-more">Know More</button>
+                      <button 
+                        className="btn-know-more"
+                        onClick={() => onPackageClick && onPackageClick(pkg.id)}
+                      >
+                        Know More
+                      </button>
                       {/* <a href="https://wa.me/919414166565" className="btn-whatsapp-small">
                         <MessageCircle size={14} />
                         WhatsApp Now

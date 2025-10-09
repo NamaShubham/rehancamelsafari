@@ -66,6 +66,23 @@ const Packages = ({ onPackageClick }) => {
         "Village & Market Visits"
       ]
     },
+    {
+      id: "horse-riding",
+      title: "Horse Riding",
+      duration: "2-3 Hours",
+      originalPrice: "INR 3,000",
+      price: "INR 1,500",
+      discount: "50% Off",
+      image: "/images/sunset-ride-july-2023.jpg",
+      features: [
+        "Majestic Horse Riding Experience",
+        "Professional Guide & Trainer",
+        "Scenic Desert Routes",
+        "Photography Sessions",
+        "Safety Equipment Provided",
+        "Refreshments Included",
+      ]
+    },
     // {
     //   id: "heritage-package",
     //   title: "Heritage Pushkar Package",
@@ -139,11 +156,11 @@ const Packages = ({ onPackageClick }) => {
 
               <div className="package-buttons">
                 <button 
-                  onClick={() => (pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day') && onPackageClick && onPackageClick(pkg.id)} 
+                  onClick={() => (pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day' || pkg.id === 'horse-riding') && onPackageClick && onPackageClick(pkg.id)} 
                   className="btn btn-primary"
-                  style={{cursor: (pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day') ? 'pointer' : 'not-allowed', opacity: (pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day') ? 1 : 0.6}}
+                  style={{cursor: (pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day' || pkg.id === 'horse-riding') ? 'pointer' : 'not-allowed', opacity: (pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day' || pkg.id === 'horse-riding') ? 1 : 0.6}}
                 >
-                  {(pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day') ? 'Know More' : 'Coming Soon'}
+                  {(pkg.id === 'luxury-getaway' || pkg.id === 'arabian-night' || pkg.id === 'dinner-dunes' || pkg.id === 'half-day' || pkg.id === 'horse-riding') ? 'Know More' : 'Coming Soon'}
                 </button>
                 {/* <a href="https://wa.me/919414166565" className="btn btn-whatsapp">
                   <MessageCircle size={16} />
